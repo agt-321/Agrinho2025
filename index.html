@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biodiversidade e Agricultura Sustentável</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="hero-section">
@@ -17,88 +18,85 @@
 
     <nav class="main-navigation">
         <a href="#importancia-geral" class="nav-item">Importância</a>
-        <a href="#impactos-diretos" class="nav-item">Impactos</a>
-        <a href="#servicos-ecossistemicos" class="nav-item">Serviços</a>
-        <a href="#desafios-solucoes" class="nav-item">Soluções</a>
-        <a href="#campo-cidade" class="nav-item">Conexão</a>
+        <a href="#beneficios" class="nav-item">Benefícios</a>
+        <a href="#servicos" class="nav-item">Serviços</a>
+        <a href="#solucoes" class="nav-item">Soluções</a>
+        <a href="#conexao" class="nav-item">Conexão</a>
     </nav>
 
     <main>
         <section id="importancia-geral" class="section-container section-light-bg">
             <div class="content-wrapper content-left-align">
-                <h2>Biodiversidade: A Base de Tudo</h2>
-                <div class="text-bubble">
+                <div class="text-block">
+                    <h2>Biodiversidade: A Base de Tudo</h2>
                     <p>A biodiversidade é a **coluna vertebral** de uma agricultura moderna, produtiva e sustentável. Ela oferece a resiliência e a adaptabilidade necessárias para enfrentar desafios globais como a segurança alimentar e as mudanças climáticas.</p>
                     <p>Ferramentas como a agricultura de precisão e o uso inteligente de espécies nativas aproveitam essa diversidade biológica, visando não só a otimização da produção, mas também a redução dos impactos ambientais e a construção de sistemas agrícolas mais harmoniosos com a natureza.</p>
                 </div>
-            </div>
-            <div class="image-gallery">
-                <div class="image-placeholder icon-field"></div>
-                <div class="image-placeholder icon-plant"></div>
+                <div class="image-gallery">
+                    <div class="image-placeholder placeholder-field"></div>
+                    <div class="image-placeholder placeholder-plant"></div>
+                </div>
             </div>
         </section>
 
-        <section id="impactos-diretos" class="section-container section-dark-bg">
+        <section id="beneficios" class="section-container section-dark-bg">
             <h2>Benefícios Essenciais da Biodiversidade no Agro</h2>
             <div class="impact-cards">
                 <div class="card" data-modal-target="polinizacaoModal">
-                    <div class="card-image-wrapper">
-                        <div class="image-placeholder icon-bee"></div>
-                        <h3>Polinização Essencial</h3>
+                    <div class="card-icon-wrapper">
+                        <div class="icon-placeholder icon-bee"></div>
                     </div>
+                    <h3>Polinização Essencial</h3>
                     <h4>O Serviço dos Polinizadores</h4>
-                    <p>Mais de 75% das culturas alimentares globais dependem de polinizadores como abelhas e borboletas. A monocultura e agrotóxicos ameaçam essas populações, impactando nossa produção de alimentos.</p>
+                    <p>Mais de 75% das culturas dependem de polinizadores. Agrotóxicos ameaçam essas populações, impactando a produção de alimentos.</p>
                     <button class="read-more-btn">Ver Mais</button>
                 </div>
 
                 <div class="card" data-modal-target="controleBiologicoModal">
-                    <div class="card-image-wrapper">
-                        <div class="image-placeholder icon-ladybug"></div>
-                        <h3>Controle Biológico de Pragas</h3>
+                    <div class="card-icon-wrapper">
+                        <div class="icon-placeholder icon-ladybug"></div>
                     </div>
+                    <h3>Controle Biológico de Pragas</h3>
                     <h4>Aliados Naturais no Campo</h4>
-                    <p>A biodiversidade oferece predadores e patógenos naturais que controlam pragas. Isso reduz a dependência de pesticidas químicos, protegendo a saúde e o meio ambiente.</p>
+                    <p>A biodiversidade oferece predadores e patógenos naturais que controlam pragas, reduzindo a dependência de pesticidas.</p>
                     <button class="read-more-btn">Ver Mais</button>
                 </div>
 
                 <div class="card" data-modal-target="regulacaoClimaticaModal">
-                    <div class="card-image-wrapper">
-                        <div class="image-placeholder icon-rain"></div>
-                        <h3>Regulação Climática e Hídrica</h3>
+                    <div class="card-icon-wrapper">
+                        <div class="icon-placeholder icon-rain"></div>
                     </div>
+                    <h3>Regulação Climática e Hídrica</h3>
                     <h4>Equilíbrio Climático para Culturas</h4>
-                    <p>Florestas e solos saudáveis regulam o clima local e regional, influenciando chuvas e temperaturas. Eles melhoram a infiltração da água, prevenindo erosão e secas.</p>
+                    <p>Florestas e solos saudáveis regulam o clima, influenciando chuvas e temperaturas, e prevenindo secas e erosão.</p>
                     <button class="read-more-btn">Ver Mais</button>
                 </div>
 
                 <div class="card" data-modal-target="soloSaudeModal">
-                    <div class="card-image-wrapper">
-                        <div class="image-placeholder icon-soil"></div>
-                        <h3>Saúde e Fertilidade do Solo</h3>
+                    <div class="card-icon-wrapper">
+                        <div class="icon-placeholder icon-soil"></div>
                     </div>
+                    <h3>Saúde e Fertilidade do Solo</h3>
                     <h4>O Ecossistema Subterrâneo</h4>
-                    <p>Solos ricos em microrganismos e invertebrados são vitais. Essa diversidade microbiana é crucial para a ciclagem de nutrientes, tornando o solo mais fértil e resiliente.</p>
+                    <p>Solos ricos em microrganismos e invertebrados são vitais para a ciclagem de nutrientes, tornando o solo mais fértil.</p>
                     <button class="read-more-btn">Ver Mais</button>
                 </div>
 
                 <div class="card" data-modal-target="recursosGeneticosModal">
-                    <div class="card-image-wrapper">
-                        <div class="image-placeholder icon-gene"></div>
-                        <h3>Recursos Genéticos e Resiliência</h3>
+                    <div class="card-icon-wrapper">
+                        <div class="icon-placeholder icon-gene"></div>
                     </div>
+                    <h3>Recursos Genéticos e Resiliência</h3>
                     <h4>A Biblioteca da Natureza</h4>
-                    <p>A variabilidade genética é um "banco de dados" natural de resistência a doenças e adversidades. Sua conservação permite desenvolver culturas adaptadas aos desafios futuros.</p>
+                    <p>A variabilidade genética oferece resistência a doenças e adversidades, permitindo o desenvolvimento de culturas adaptadas.</p>
                     <button class="read-more-btn">Ver Mais</button>
                 </div>
             </div>
         </section>
 
-        <section id="servicos-ecossistemicos" class="section-container section-light-bg">
+        <section id="servicos" class="section-container section-light-bg">
             <h2>Serviços Ecossistêmicos: Pilares Invisíveis</h2>
             <div class="content-wrapper content-right-align">
-                <div class="image-gallery">
-                    <div class="image-placeholder large-placeholder icon-ecosystem"></div>
-                </div>
                 <div class="text-block">
                     <p>Além dos impactos diretos, a biodiversidade oferece uma gama de **serviços ecossistêmicos** que são a base da produção agrícola e da qualidade de vida:</p>
                     <ul>
@@ -109,43 +107,46 @@
                         <li><strong>Habitat para a Fauna Silvestre:</strong> Refúgio e corredores para a vida selvagem.</li>
                     </ul>
                 </div>
+                <div class="image-gallery">
+                    <div class="image-placeholder placeholder-ecosystem large-placeholder"></div>
+                </div>
             </div>
         </section>
 
-        <section id="desafios-solucoes" class="section-container section-dark-bg">
+        <section id="solucoes" class="section-container section-dark-bg">
             <h2>Desafios e Soluções para um Futuro Sustentável</h2>
             <div class="solution-grid">
                 <div class="solution-card">
-                    <div class="icon-small icon-agroecology"></div>
+                    <div class="icon-small solution-agroecology"></div>
                     <h3>Agroecologia e Sistemas Agroflorestais</h3>
                     <p>Integração de árvores e culturas para resiliência e produtividade.</p>
                 </div>
                 <div class="solution-card">
-                    <div class="icon-small icon-biotechnology"></div>
+                    <div class="icon-small solution-biotechnology"></div>
                     <h3>Biotecnologia e Melhoramento Genético</h3>
                     <p>Variedades resistentes e nutritivas pela vasta biblioteca genética.</p>
                 </div>
                 <div class="solution-card">
-                    <div class="icon-small icon-conservation"></div>
+                    <div class="icon-small solution-conservation"></div>
                     <h3>Conservação de Áreas Naturais</h3>
                     <p>Proteção de reservas legais e fragmentos florestais nas propriedades.</p>
                 </div>
                 <div class="solution-card">
-                    <div class="icon-small icon-education"></div>
+                    <div class="icon-small solution-education"></div>
                     <h3>Educação e Conscientização</h3>
                     <p>Capacitar produtores e consumidores sobre práticas sustentáveis.</p>
                 </div>
             </div>
         </section>
 
-        <section id="campo-cidade" class="section-container section-light-bg">
+        <section id="conexao" class="section-container section-light-bg">
             <h2>Campo e Cidade: Uma Conexão Essencial</h2>
             <div class="content-wrapper content-left-align">
                 <div class="text-block">
                     <p>A relação entre campo e cidade é de interdependência. A cidade é um **mercado consumidor vital** e um **centro de inovação** que impulsiona o desenvolvimento rural. As áreas urbanas também valorizam a natureza do campo e são cruciais para o apoio a políticas públicas que promovem a sustentabilidade e a biodiversidade.</p>
                 </div>
                 <div class="image-gallery">
-                    <div class="image-placeholder large-placeholder icon-city-farm"></div>
+                    <div class="image-placeholder placeholder-city-farm large-placeholder"></div>
                 </div>
             </div>
         </section>
@@ -200,7 +201,6 @@
             <p>A variabilidade genética, tanto dentro das espécies cultivadas (diferentes variedades de milho, feijão, etc.) quanto em seus parentes selvagens, é um "banco de dados" natural e insubstituível. Essa diversidade genética contém as chaves para a resistência a novas doenças, pragas emergentes e condições climáticas extremas (secas, inundações, temperaturas elevadas). A conservação dessa riqueza genética, em bancos de sementes e in situ (em seus habitats naturais), permite que cientistas e melhoristas desenvolvam continuamente novas variedades de culturas que são mais resilientes, nutritivas e adaptadas aos desafios futuros, garantindo a segurança alimentar a longo prazo para a humanidade.</p>
         </div>
     </div>
-
 
     <script src="script.js"></script>
 </body>
