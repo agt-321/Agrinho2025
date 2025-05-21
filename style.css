@@ -3,7 +3,7 @@
     --primary-green: #4CAF50;
     --dark-green: #2e7d32;
     --light-green: #66BB6A;
-    --pale-green: #c8e6c9;
+    --pale-green: #e8f5e9; /* Corrigido para um verde bem claro para os cards */
     --accent-green: #81C784;
     --placeholder-bg: #dcedc8;
     --light-grey: #e0e0e0;
@@ -12,6 +12,8 @@
     --light-text: #666;
     --bg-light: #f8f8f8;
     --bg-white: #ffffff;
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    --hover-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 /* --- General Body Styles --- */
@@ -23,12 +25,14 @@ body {
     color: var(--dark-text);
     line-height: 1.6;
     background-color: var(--bg-light);
+    scroll-behavior: smooth; /* Para rolagem suave */
 }
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-green);
     margin-top: 0;
+    font-weight: 700;
 }
 
 a {
@@ -41,20 +45,19 @@ a {
     background-color: var(--primary-green);
     color: white;
     text-align: center;
-    padding: 60px 20px; /* Um pouco mais de padding */
+    padding: 60px 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .hero-section h1 {
     margin: 0 0 10px 0;
-    font-size: 3.2em; /* Tamanho ajustado */
+    font-size: 3.2em;
     color: white;
-    font-weight: 700;
 }
 
 .hero-section p {
     margin: 0;
-    font-size: 1.4em; /* Tamanho ajustado */
+    font-size: 1.4em;
     opacity: 0.95;
     font-weight: 400;
 }
@@ -75,7 +78,7 @@ a {
 .nav-item {
     background-color: var(--accent-green);
     padding: 10px 20px;
-    border-radius: 25px; /* Mais arredondado */
+    border-radius: 25px;
     margin: 5px 10px;
     font-size: 1em;
     color: var(--dark-text);
@@ -86,14 +89,14 @@ a {
 
 .nav-item:hover {
     background-color: #A5D6A7;
-    transform: translateY(-3px); /* Efeito mais visível */
+    transform: translateY(-3px);
 }
 
 /* --- Section Containers --- */
 .section-container {
-    padding: 80px 20px; /* Mais padding para maior espaçamento vertical */
+    padding: 80px 20px;
     margin: 0 auto;
-    max-width: 1200px; /* Largura máxima para centralizar */
+    max-width: 1200px;
 }
 
 .section-light-bg {
@@ -107,17 +110,16 @@ a {
 .section-container h2 {
     text-align: center;
     margin-bottom: 40px;
-    font-size: 2.8em; /* Tamanho ajustado */
+    font-size: 2.8em;
     color: var(--dark-green);
     position: relative;
-    font-weight: 700;
 }
 
 .section-container h2::after {
     content: '';
     display: block;
-    width: 80px; /* Sublinhado maior */
-    height: 4px; /* Mais grosso */
+    width: 80px;
+    height: 4px;
     background-color: var(--primary-green);
     margin: 15px auto 0;
     border-radius: 2px;
@@ -128,7 +130,7 @@ a {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 60px; /* Mais espaço entre blocos */
+    gap: 60px;
 }
 
 .content-left-align {
@@ -136,16 +138,16 @@ a {
 }
 
 .content-right-align {
-    flex-direction: row-reverse; /* Swap order for this section */
+    flex-direction: row-reverse;
 }
 
 .text-block {
     flex: 2;
-    min-width: 380px; /* Aumentar largura mínima */
-    background-color: var(--pale-green);
+    min-width: 380px;
+    background-color: var(--pale-green); /* Usar pale-green aqui */
     border-radius: 20px;
-    padding: 35px 45px; /* Mais padding interno */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Sombra mais suave */
+    padding: 35px 45px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .text-block p {
@@ -182,8 +184,8 @@ a {
 
 /* Placeholder for images (no direct emojis here, handled by CSS) */
 .image-placeholder {
-    width: 200px; /* Maior */
-    height: 140px; /* Maior */
+    width: 200px;
+    height: 140px;
     background-color: var(--placeholder-bg);
     border: 1px solid var(--accent-green);
     border-radius: 12px;
@@ -191,14 +193,16 @@ a {
     align-items: center;
     justify-content: center;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
-    overflow: hidden; /* Garante que o conteúdo não vaze */
-    position: relative; /* Para posicionar o pseudo-elemento */
+    overflow: hidden;
+    position: relative;
+    /* Adicione um background-image com um SVG real para ícones profissionais aqui */
+    /* Exemplo: background-image: url('path/to/sua-imagem.svg'); background-size: contain; background-repeat: no-repeat; background-position: center; */
 }
 
 /* Pseudo-element for placeholder icons (use real images/SVGs in production!) */
 .image-placeholder::before {
     content: ''; /* Emojis como fallback ou para demonstração rápida */
-    font-size: 4em; /* Tamanho do emoji */
+    font-size: 4em;
     color: var(--dark-green);
     position: absolute;
     top: 50%;
@@ -207,45 +211,45 @@ a {
     opacity: 0.7;
 }
 
-/* Specific icons for placeholders (replace with background-image: url() for production) */
+/* Specific icons for placeholders */
 .placeholder-field::before { content: '🌳'; }
 .placeholder-plant::before { content: '🌱'; }
 .placeholder-ecosystem::before { content: '🏞️'; font-size: 3.5em;}
-.placeholder-city-farm::before { content: '🏙️🚜'; font-size: 3em;} /* Combinação para cidade e fazenda */
+.placeholder-city-farm::before { content: '🏙️🚜'; font-size: 3em;}
 
 /* How Biodiversity Impacts Section - Cards with Modals */
 .impact-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; /* Mais espaço entre cards */
+    gap: 30px;
 }
 
 .card {
-    background-color: var(--pale-green);
+    background-color: var(--bg-white); /* Cards em branco */
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra mais visível */
+    box-shadow: var(--card-shadow);
     padding: 25px;
-    width: 300px; /* Largura um pouco maior */
+    width: 300px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    display: flex; /* Para flexbox interno */
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Espaçamento entre conteúdo e botão */
+    justify-content: space-between;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    box-shadow: var(--hover-shadow);
 }
 
 .card-icon-wrapper {
     margin-bottom: 15px;
 }
 
-.icon-placeholder { /* Ícones dentro dos cards */
-    width: 90px; /* Tamanho do círculo do ícone */
+.icon-placeholder {
+    width: 90px;
     height: 90px;
     background-color: var(--primary-green);
     border-radius: 50%;
@@ -253,13 +257,13 @@ a {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    font-size: 3em; /* Tamanho do emoji */
+    font-size: 3em;
     color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    /* Instrução: Em produção, use background-image: url('path/to/icon.svg'); */
+    /* Em produção, use background-image: url('path/to/icon.svg'); */
 }
 
-/* Specific icons for card placeholders (replace with background-image: url() for production) */
+/* Specific icons for card placeholders */
 .icon-bee::before { content: '🐝'; }
 .icon-ladybug::before { content: '🐞'; }
 .icon-rain::before { content: '🌧️'; }
@@ -284,8 +288,8 @@ a {
 .card p {
     font-size: 0.9em;
     color: var(--medium-text);
-    margin-bottom: 20px; /* Espaço antes do botão */
-    flex-grow: 1; /* Permite que o parágrafo ocupe espaço restante */
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .read-more-btn {
@@ -298,7 +302,7 @@ a {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: auto; /* Empurra o botão para baixo se o card for flex column */
+    margin-top: auto;
 }
 
 .read-more-btn:hover {
@@ -309,17 +313,17 @@ a {
 /* Solution Grid Section */
 .solution-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Tamanho ajustado */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     justify-content: center;
-    max-width: 1000px; /* Largura máxima para a grid */
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .solution-card {
     background-color: var(--bg-white);
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: var(--card-shadow);
     padding: 25px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -327,11 +331,11 @@ a {
 
 .solution-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    box-shadow: var(--hover-shadow);
 }
 
 .solution-card .icon-small {
-    width: 70px; /* Ícones maiores */
+    width: 70px;
     height: 70px;
     margin: 0 auto 15px auto;
     background-color: var(--accent-green);
@@ -339,15 +343,15 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.8em; /* Emojis maiores */
-    color: white; /* Cor branca para o emoji */
+    font-size: 2.8em;
+    color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Specific icons for solution cards (replace with background-image: url() for production) */
+/* Specific icons for solution cards */
 .solution-agroecology::before { content: '🌳'; }
 .solution-biotechnology::before { content: '🔬'; }
-.solution-conservation::before { content: '🌿'; } /* Emojis ligeiramente diferentes para clareza */
+.solution-conservation::before { content: '🌿'; }
 .solution-education::before { content: '📚'; }
 
 /* Call to Action Section */
@@ -363,7 +367,6 @@ a {
     color: white;
     font-size: 2.5em;
     margin-bottom: 20px;
-    font-weight: 700;
 }
 
 .call-to-action p {
@@ -402,38 +405,47 @@ a {
     margin-top: 20px;
 }
 
-/* --- Modal Styles --- */
+/* --- Modal Styles (CORRIGIDO!) --- */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 9999; /* Z-index MUITO alto para garantir que fique por cima de tudo */
+    /* Garante que o modal cubra toda a tela e fique por cima */
+    display: none; /* Controlado por JS, será 'flex' quando aberto */
+    position: fixed;
+    z-index: 9999; /* Z-index MUITO ALTO */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.7); /* Fundo escuro com mais opacidade */
-    display: flex; /* Usar flex para centralizar */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Fundo preto semi-transparente */
+    /* Centraliza o conteúdo do modal */
+    display: flex; /* Adicionado para funcionar com justify-content e align-items */
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Padding para garantir que não encoste nas bordas */
+    padding: 20px; /* Padding geral para telas menores */
+    box-sizing: border-box; /* Inclui padding na largura/altura total */
 }
+
+/* Esconde o modal quando não está ativo */
+.modal[style*="display: none"] {
+    display: none !important; /* Força o display: none */
+}
+
 
 .modal-content {
     background-color: var(--bg-white);
-    padding: 35px; /* Mais padding */
+    padding: 35px;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4); /* Sombra mais pronunciada */
-    width: 95%; /* Responsive width */
-    max-width: 700px; /* Maior largura máxima para o conteúdo */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    width: 95%; /* Adapta-se à largura da tela */
+    max-width: 700px; /* Limita a largura em telas grandes */
     position: relative;
     animation: fadeIn 0.3s ease-out;
-    max-height: 90vh; /* Limitar altura do modal */
-    overflow-y: auto; /* Scroll interno se o conteúdo for grande */
+    max-height: 90vh; /* Ocupa no máximo 90% da altura da viewport */
+    overflow-y: auto; /* Adiciona scroll interno se o conteúdo for muito longo */
+    box-sizing: border-box; /* Inclui padding na largura/altura total */
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-30px); } /* Efeito mais acentuado */
+    from { opacity: 0; transform: translateY(-30px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -453,7 +465,7 @@ a {
 
 .close-btn {
     color: #888;
-    font-size: 32px; /* Ícone de fechar maior */
+    font-size: 32px;
     font-weight: bold;
     position: absolute;
     top: 15px;
@@ -474,7 +486,7 @@ a {
     .hero-section p { font-size: 1.2em; }
     .section-container h2 { font-size: 2.4em; }
     .content-wrapper { gap: 40px; }
-    .text-block { padding: 30px 40px; }
+    .text-block { padding: 30px 40px; min-width: 300px; } /* Ajuste */
     .image-placeholder { width: 180px; height: 120px; }
     .card { width: 280px; padding: 20px; }
     .solution-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
@@ -496,15 +508,16 @@ a {
     .image-gallery { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 15px; }
     .image-placeholder, .large-placeholder { width: 150px; height: 100px; }
     .image-placeholder::before { font-size: 3em; }
-    .card { width: 95%; /* Quase largura total */ padding: 20px; }
+    .card { width: 95%; padding: 20px; }
     .icon-placeholder { width: 70px; height: 70px; font-size: 2.5em; }
-    .solution-grid { grid-template-columns: 1fr; } /* Stack solution cards */
+    .solution-grid { grid-template-columns: 1fr; }
     .solution-card .icon-small { width: 60px; height: 60px; font-size: 2.2em; }
     .call-to-action h2 { font-size: 2em; }
     .call-to-action p { font-size: 1em; }
     .modal-content { padding: 25px; max-width: 90%; }
     .modal-content h3 { font-size: 1.8em; }
     .modal-content p { font-size: 0.95em; }
+    .close-btn { font-size: 28px; top: 10px; right: 20px; }
 }
 
 @media (max-width: 480px) {
