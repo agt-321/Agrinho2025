@@ -1,30 +1,36 @@
-/* Estilos Base - Recomeçando TOTALMENTE para garantir que não há conflitos */
+/* Importar fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
 
-/* Cores básicas */
 :root {
-    --primary-green: #4CAF50;
-    --dark-green: #2e7d32;
-    --light-green: #66BB6A;
-    --grey-bg: #f0f0f0; /* Cor de fundo mais clara para seções */
-    --text-color: #333;
-    --white-bg: #ffffff;
-    --border-color: #ccc;
+    /* Paleta de Cores Verdes Aprimorada (do seu outro site) */
+    --primary-green: #2E7D32; /* Verde floresta profundo */
+    --secondary-green: #4CAF50; /* Verde médio vibrante */
+    --accent-green: #66BB6A; /* Verde folha mais claro para destaques */
+    --dark-text-green: #1B5E20; /* Verde bem escuro para textos principais */
+    --light-bg-green: #F1F8E9; /* Fundo verde super suave */
+    --text-color: #333; /* Cor padrão do texto */
+    --white: #FFFFFF;
+    --soft-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --medium-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    --red-button: #D32F2F; /* Vermelho para o botão de fechar ou destaque */
+    --red-button-hover: #B71C1C;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-bg-green); /* Fundo geral suave */
     color: var(--text-color);
     line-height: 1.6;
-    background-color: var(--grey-bg);
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
 }
 
+/* Base de títulos */
 h1, h2, h3, h4 {
-    font-family: 'Roboto', sans-serif;
-    color: var(--dark-green);
+    font-family: 'Playfair Display', serif; /* Usando Playfair Display para títulos */
+    color: var(--dark-text-green);
     margin-top: 0;
+    font-weight: 700;
 }
 
 a {
@@ -32,328 +38,464 @@ a {
     color: inherit;
 }
 
-/* Hero Section */
-.hero-section {
-    background-color: var(--primary-green);
-    color: white;
+/* Header Geral (agora como no seu outro site) */
+.header {
+    background-color: var(--primary-green); /* Verde floresta para o cabeçalho */
+    color: var(--white);
+    padding: 15px 0;
     text-align: center;
-    padding: 40px 20px;
+    box-shadow: var(--medium-shadow);
+    position: sticky; /* Sticky para a navegação */
+    top: 0;
+    z-index: 1000; /* Z-index alto para ficar por cima */
 }
 
-.hero-section h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
-    color: white;
-}
-
-.hero-section p {
-    font-size: 1.2em;
-    opacity: 0.9;
-}
-
-/* Navigation */
-.main-navigation {
-    background-color: var(--light-green);
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    gap: 30px;
+    flex-wrap: wrap; /* Para responsividade da navegação */
 }
 
-.nav-item {
-    color: white;
-    padding: 10px 15px;
-    margin: 5px 10px;
-    background-color: var(--dark-green);
-    border-radius: 5px;
+.main-nav a {
+    color: var(--white);
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
 }
 
-.nav-item:hover {
-    background-color: #388e3c;
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
-/* Section Containers */
-.section-container {
-    padding: 40px 20px;
-    max-width: 960px;
-    margin: 20px auto;
-    background-color: var(--white-bg);
+.header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-top: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    color: var(--white); /* Garante que o título do header seja branco */
+}
+
+/* Container principal para o conteúdo das seções */
+.container {
+    max-width: 1080px; /* Aumentei um pouco para ter mais espaço */
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--medium-shadow);
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero Section (como no seu outro site) */
+.hero-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 0;
+    background: linear-gradient(to right, rgba(241, 248, 233, 0.8), rgba(241, 248, 233, 0.95)); /* Fundo mais claro e suave */
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
+    box-shadow: var(--soft-shadow);
 }
 
-.section-container h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.title h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 3.2em;
+    color: var(--dark-text-green); /* Verde escuro para o título principal */
+    margin: 0;
     text-align: center;
-    color: var(--dark-green); /* Garante a cor verde dos títulos de seção */
+    line-height: 1.1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* Content Wrapper para texto e imagem */
+.title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em; /* Mantido o tamanho grande para o destaque */
+    margin: 10px 0 20px;
+    color: var(--primary-green); /* Verde floresta para o subtítulo grande */
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Seções de Conteúdo (Geral) */
+.content-section {
+    padding: 40px 0;
+    text-align: center; /* Centraliza títulos e wrappers */
+}
+
+.content-section h2 {
+    font-size: 2.5em; /* Título maior para seções */
+    margin-bottom: 30px;
+    color: var(--primary-green);
+}
+
+/* Wrapper para texto e imagem */
 .content-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px; /* Espaçamento entre os elementos */
     margin-top: 30px;
 }
 
 .text-block {
-    flex: 1;
-    min-width: 300px;
-    text-align: left;
-}
-
-/* Placeholders de Imagem (com emojis diretos no HTML) */
-.image-placeholder {
-    width: 250px;
-    height: 180px;
-    background-color: #cfe9d1;
-    border: 2px solid var(--primary-green);
+    flex: 2; /* Permite que o bloco de texto seja maior */
+    min-width: 350px; /* Largura mínima para o texto */
+    max-width: 600px; /* Largura máxima para o texto */
+    text-align: left; /* Alinha o texto à esquerda dentro do bloco */
+    background-color: var(--white); /* Fundo branco para o bloco de texto */
+    padding: 25px;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4em; /* Tamanho do emoji */
-    overflow: hidden;
-    color: var(--dark-green); /* Cor para o emoji, se precisar */
+    box-shadow: var(--soft-shadow);
 }
 
-/* Cards de Impacto (Polinização, Controle Biológico, etc.) */
-.impact-cards-simple {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.card-simple {
-    background-color: var(--white-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 15px;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.icon-placeholder {
-    width: 80px;
-    height: 80px;
-    background-color: var(--primary-green);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 10px auto;
-    font-size: 2.5em; /* Tamanho do emoji */
-    color: white; /* Cor para o emoji */
-}
-
-.card-simple p {
-    font-size: 0.9em;
-    margin-bottom: 15px;
-    flex-grow: 1;
-}
-
-.read-more-btn {
-    background-color: var(--dark-green);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-    margin-top: auto;
-    display: inline-block; /* Para garantir que o link se comporte como botão */
-}
-
-.read-more-btn:hover {
-    background-color: #388e3c;
-}
-
-/* Footer */
-.footer-section {
-    background-color: var(--dark-green);
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
-    font-size: 0.85em;
-    margin-top: 40px;
-}
-
-/* MODAL - USANDO :target PARA ABRIR E FECHAR SEM JS */
-.modal {
-    display: none; /* Escondido por padrão */
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;   /* Centraliza verticalmente */
-    padding: 20px;
-    box-sizing: border-box;
-    /* Adiciona transição para o display */
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
-}
-
-/* Quando o modal é o alvo da URL (:target), ele se torna visível */
-.modal:target {
-    display: flex; /* Torna visível e usa flexbox */
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Conteúdo do Modal */
-.modal-content {
-    background-color: var(--white-bg);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-sizing: border-box;
-    transform: translateY(0); /* Garante posição inicial sem offset */
-    transition: transform 0.3s ease-out; /* Adiciona transição para o movimento */
-}
-
-/* Pequeno efeito ao abrir (opcional) */
-.modal:target .modal-content {
-    transform: translateY(0);
-}
-
-
-.modal-content h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: var(--dark-green);
-}
-
-.modal-content p {
-    font-size: 1em;
-    line-height: 1.6;
+.text-block p {
+    font-size: 1.1em;
     color: var(--text-color);
 }
 
-.close-btn {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 15px;
+/* Placeholders de Imagem para seções (como na sua primeira imagem) */
+.image-placeholder {
+    flex: 1; /* Permite que o placeholder ocupe o espaço restante */
+    min-width: 250px;
+    height: 200px;
+    background-color: #d8e6d8; /* Verde claro para o fundo */
+    border: 2px dashed var(--accent-green); /* Borda tracejada para indicar placeholder */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: var(--dark-text-green); /* Cor para os ícones */
+    font-size: 5em; /* Tamanho do ícone */
+    opacity: 0.7; /* Suaviza o ícone */
+}
+
+/* Ícones para os placeholders de seção (se forem ícones, não imagens reais) */
+.placeholder-field::before { content: '🌳'; } /* Ícone para campo */
+.placeholder-city-farm::before { content: '🏙️'; font-size: 4.5em;} /* Ícone para cidade e fazenda */
+
+
+/* Grid para os cards de benefícios (plant-card do seu outro site) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustado o minmax */
+    gap: 30px;
+    justify-content: center; /* Centraliza o grid se houver espaço */
+    align-items: stretch; /* Garante que os cards tenham a mesma altura */
+}
+
+.plant-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--medium-shadow);
+}
+
+/* As "plant-box" agora são os containers dos ícones */
+.plant-box {
+    height: 160px; /* Altura do espaço para o ícone */
+    background-color: var(--secondary-green); /* Verde vibrante para as caixas de ícone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    font-size: 5em; /* Tamanho dos emojis/ícones */
+    color: var(--white); /* Cor dos emojis/ícones */
+    position: relative; /* Para posicionar o ::before */
+}
+
+/* Emojis para os ícones dos cards (dentro de .plant-box) */
+.plant-box.icon-bee::before { content: '🐝'; }
+.plant-box.icon-ladybug::before { content: '🐞'; }
+.plant-box.icon-rain::before { content: '🌧️'; }
+.plant-box.icon-soil::before { content: '🌍'; } /* Adicionado para solo */
+.plant-box.icon-gene::before { content: '🧬'; } /* Adicionado para genéticos */
+
+/* Nome da planta/benefício */
+.plant-name-label {
+    font-family: 'Montserrat', sans-serif; /* Montserrat para nomes */
+    color: var(--dark-text-green);
+    font-weight: 700;
+    font-size: 1.3em;
+    padding: 15px 15px 5px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 15px;
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Permite que a descrição ocupe o espaço disponível */
+}
+
+/* Oculta o checkbox real */
+.read-more-toggle {
+    display: none;
+}
+
+/* Estilo do label (que age como botão) */
+.read-more-btn {
+    display: inline-block;
+    background-color: var(--secondary-green); /* Verde vibrante para o botão */
+    color: var(--white);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    text-decoration: none; /* Remove sublinhado do link */
+    margin-top: auto; /* Empurra o botão para o final da card */
+    font-size: 0.95em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center; /* Centraliza o botão horizontalmente */
+    position: relative;
+    min-width: 120px;
+    text-align: center;
+    z-index: 1;
+}
+
+.read-more-btn:hover {
+    background-color: var(--primary-green); /* Escurece no hover */
+    transform: translateY(-2px);
+}
+
+.read-more-btn .btn-text-less {
+    display: none;
+}
+
+.read-more-toggle:checked + .read-more-btn .btn-text-more {
+    display: none;
+}
+
+.read-more-toggle:checked + .read-more-btn .btn-text-less {
+    display: inline;
+}
+
+/* Estilo para a caixa que abre abaixo do botão (dropdown) */
+.more-info-content {
+    max-height: 0; /* Começa com altura zero, escondido */
+    overflow: hidden; /* Esconde o conteúdo que excede a altura */
+    padding: 0 15px; /* Padding inicial zero */
+    transition: max-height 0.7s ease-in-out, padding 0.7s ease-in-out, opacity 0.5s ease-out;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    background-color: var(--light-bg-green); /* Fundo verde claro para a caixa */
+    border-top: 1px solid var(--accent-green); /* Linha divisória sutil */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03); /* Sombra interna sutil */
+    margin-top: 10px; /* Espaço entre o botão e o início do conteúdo expandido */
+    opacity: 0; /* Começa invisível */
+}
+
+/* Quando o checkbox está marcado, o conteúdo se expande e aparece */
+.read-more-toggle:checked ~ .more-info-content {
+    max-height: 1000px; /* Valor alto para acomodar o texto */
+    padding: 15px; /* Adiciona padding quando expandido */
+    opacity: 1; /* Torna visível */
+}
+
+.more-info-content p {
+    margin: 0;
+    padding-bottom: 10px;
+    color: var(--text-color);
+}
+
+.more-info-content p strong {
+    font-weight: bold;
+    color: var(--dark-text-green);
+}
+
+/* Footer (como no seu outro site) */
+.footer {
+    text-align: center;
+    color: var(--white);
+    font-size: 0.9em;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--primary-green); /* Verde floresta para o rodapé */
+    border-radius: 10px 10px 0 0;
+    box-shadow: var(--medium-shadow);
+}
+
+.footer .github-link {
+    margin-top: 10px;
+    font-size: 1.8em;
+}
+
+.footer .github-link a {
+    color: var(--white);
     transition: color 0.3s ease;
 }
 
-.close-btn:hover {
-    color: #333;
+.footer .github-link a:hover {
+    color: var(--accent-green); /* Verde no hover do ícone */
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2em;
+@media (max-width: 1024px) {
+    .container {
+        padding: 25px;
+        margin: 30px auto;
     }
-    .hero-section p {
-        font-size: 1em;
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
     }
-    .main-navigation {
-        flex-direction: column;
-        align-items: center;
+    .plant-card {
+        padding-bottom: 10px;
     }
-    .nav-item {
-        width: 90%;
-        text-align: center;
-        margin: 5px 0;
-    }
-    .section-container {
-        padding: 30px 15px;
-        margin: 15px auto;
-    }
-    .section-container h2 {
-        font-size: 1.8em;
+    .plant-box {
+        height: 140px;
+        font-size: 4em;
     }
     .content-wrapper {
+        gap: 30px;
+    }
+    .text-block {
+        min-width: 300px;
+        padding: 20px;
+    }
+    .image-placeholder {
+        min-width: 200px;
+        height: 160px;
+        font-size: 4em;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.8em;
+    }
+    .main-nav ul {
         flex-direction: column;
+        gap: 8px;
+    }
+    .main-nav a {
+        padding: 8px 10px;
+        font-size: 1em;
+    }
+    .title h1 {
+        font-size: 2.5em;
+    }
+    .title h2 {
+        font-size: 3em;
+        letter-spacing: 1px;
+    }
+    .subtitle {
+        font-size: 1.1em;
+    }
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+    .content-section h2 {
+        font-size: 2em;
+    }
+    .content-wrapper {
+        flex-direction: column; /* Pilha os blocos de texto e imagem */
         gap: 20px;
     }
     .text-block {
-        min-width: unset;
+        min-width: unset; /* Remove a largura mínima para telas menores */
+        max-width: 100%;
+        text-align: center; /* Centraliza o texto em telas menores */
     }
     .image-placeholder {
-        width: 100%;
-        max-width: 250px;
+        width: 100%; /* Ocupa a largura total disponível */
+        max-width: 250px; /* Limita a largura em telas muito pequenas */
         height: 150px;
         font-size: 3em;
     }
-    .impact-cards-simple {
-        flex-direction: column;
-        align-items: center;
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste para cards em telas menores */
+        gap: 20px;
     }
-    .card-simple {
-        width: 90%;
-        max-width: 280px;
+    .plant-card {
+        width: 100%; /* Ocupa a largura total disponível */
+        max-width: 300px; /* Limita em telas maiores */
+        margin: 0 auto; /* Centraliza o card individualmente */
     }
-    .modal-content {
-        padding: 20px;
+    .plant-box {
+        height: 120px;
+        font-size: 3.5em;
     }
-    .modal-content h3 {
-        font-size: 1.5em;
+    .plant-name-label {
+        font-size: 1.2em;
     }
-    .modal-content p {
+    .description {
         font-size: 0.9em;
     }
-    .close-btn {
-        font-size: 24px;
-        top: 8px;
-        right: 12px;
+    .read-more-btn {
+        font-size: 0.9em;
+        padding: 7px 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-section h1 {
-        font-size: 1.8em;
-    }
-    .hero-section p {
-        font-size: 0.9em;
-    }
-    .nav-item {
-        font-size: 0.9em;
-        padding: 8px 10px;
-    }
-    .section-container h2 {
+    .header-title {
         font-size: 1.5em;
+    }
+    .title h1 {
+        font-size: 2em;
+    }
+    .title h2 {
+        font-size: 2.5em;
+    }
+    .subtitle {
+        font-size: 1em;
+    }
+    .container {
+        padding: 15px;
+    }
+    .content-section h2 {
+        font-size: 1.8em;
     }
     .image-placeholder {
         height: 120px;
         font-size: 2.5em;
     }
-    .icon-placeholder {
-        width: 70px;
-        height: 70px;
-        font-size: 2em;
+    .plant-box {
+        height: 100px;
+        font-size: 3em;
     }
 }
