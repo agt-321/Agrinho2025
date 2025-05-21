@@ -437,6 +437,10 @@ a {
     box-shadow: var(--shadow-medium);
 }
 
+.footer p { /* Estilo para todos os parágrafos do footer */
+    margin-bottom: 8px; /* Espaçamento entre os parágrafos */
+}
+
 .footer .github-link {
     margin-top: 15px;
     font-size: 1.8em;
@@ -449,6 +453,17 @@ a {
 
 .footer .github-link a:hover {
     color: var(--accent-green);
+}
+
+.footer-email-link { /* Novo estilo para o link de e-mail no footer */
+    color: var(--accent-green); /* Cor que se destaca */
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color var(--transition-normal);
+}
+
+.footer-email-link:hover {
+    color: var(--card-background); /* Fica branco no hover */
 }
 
 /* -------------------- */
@@ -648,5 +663,9 @@ a {
     }
     .cta-button {
         font-size: 0.9em;
+    }
+    .footer-email-link {
+        font-size: 0.85em; /* Ajusta tamanho da fonte do email em telas pequenas */
+        word-break: break-all; /* Quebra a linha se o e-mail for muito longo */
     }
 }
