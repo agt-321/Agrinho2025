@@ -1,149 +1,233 @@
-/* General Body Styles */
+/* --- General Body Styles --- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #333;
+    line-height: 1.6;
+    background-color: #f8f8f8;
 }
 
-/* Hero Section (Green Top) */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2e7d32; /* Darker green for headings */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Hero Section (Green Top) --- */
 .hero-section {
-    background-color: #4CAF50; /* A shade of green */
+    background-color: #4CAF50; /* Primary green */
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .hero-section h1 {
-    margin: 0 0 10px 0;
-    font-size: 2.5em;
+    margin: 0 0 15px 0;
+    font-size: 3em;
+    color: white;
 }
 
 .hero-section p {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    opacity: 0.9;
 }
 
-/* Navigation Section (Small Boxes) */
-.navigation-section {
-    background-color: #A0C8A0; /* Lighter green/greyish */
+/* --- Main Navigation --- */
+.main-navigation {
+    background-color: #66BB6A; /* Lighter green */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
     padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky; /* Sticky navigation */
+    top: 0;
+    z-index: 1000; /* Ensures it stays on top */
 }
 
 .nav-item {
-    background-color: #B0D8B0; /* Slightly different shade for items */
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-size: 0.9em;
+    background-color: #81C784; /* Slightly different shade for items */
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 5px 10px;
+    font-size: 1em;
     color: #333;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Biodiversity Future Section */
+.nav-item:hover {
+    background-color: #A5D6A7;
+    transform: translateY(-2px);
+}
+
+/* --- Section Containers --- */
+.section-container {
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Max width for content */
+}
+
+.section-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #2e7d32;
+    position: relative;
+}
+
+.section-container h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #4CAF50;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Biodiversity Future Section (Grey background) --- */
 .biodiversity-future-section {
-    background-color: #D3D3D3; /* Grey background */
+    background-color: #e0e0e0; /* Light grey */
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
-    gap: 30px; /* Space between content and images */
+    gap: 50px; /* Increased gap */
 }
 
 .content-left {
-    flex: 1; /* Takes up available space */
-    min-width: 300px; /* Minimum width before wrapping */
-    text-align: center; /* Center text within its container */
+    flex: 2; /* Takes more space */
+    min-width: 350px;
+    text-align: left; /* Align text left */
 }
 
 .content-left h2 {
-    color: #4CAF50; /* Green heading */
-    font-size: 2em;
-    margin-bottom: 20px;
+    text-align: left; /* Align heading left within its container */
+    margin-bottom: 25px;
 }
 
+.content-left h2::after {
+    margin: 15px 0 0 0; /* Align underline with text */
+}
+
+
 .text-bubble {
-    background-color: #C0D8C0; /* Light green/grey for the bubble */
-    border-radius: 25px; /* Rounded corners */
-    padding: 20px 30px;
-    text-align: center;
-    max-width: 600px; /* Limit bubble width */
-    margin: 0 auto; /* Center the bubble */
+    background-color: #c8e6c9; /* Light green/grey for the bubble */
+    border-radius: 30px; /* More rounded corners */
+    padding: 30px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.text-bubble p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+.text-bubble p:last-child {
+    margin-bottom: 0;
 }
 
 .image-placeholders-right {
+    flex: 1; /* Takes less space */
+    min-width: 200px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    align-items: center; /* Center images if flex column */
+    gap: 25px;
+    align-items: center;
 }
 
+/* Placeholder for images - general style */
 .image-placeholder {
-    width: 150px; /* Example size */
-    height: 100px; /* Example size */
-    background-color: #DFF0D8; /* Very light green/blue for image placeholder */
-    border: 1px solid #C0D8C0;
-    border-radius: 5px;
+    width: 180px;
+    height: 120px;
+    background-color: #dcedc8; /* Very light green for placeholder */
+    border: 1px solid #a5d6a7;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    /* For visual representation, you could add icons with ::before */
+    font-size: 3em;
+    color: #7cb342;
 }
+
+/* Specific icons for placeholders (emulating images) */
+.icon-field::before { content: '🌳'; }
+.icon-plant::before { content: '🌱'; }
+.icon-bee::before { content: '🐝'; }
+.icon-ladybug::before { content: '🐞'; }
+.icon-rain::before { content: '🌧️'; }
+.icon-soil::before { content: '🌍'; }
+.icon-gene::before { content: '🧬'; }
+.icon-ecosystem::before { content: '🌲'; }
+.icon-city-farm::before { content: '🏘️➕🚜'; font-size: 2.5em;}
+
 
 /* How Biodiversity Impacts Section */
 .how-biodiversity-impacts {
-    background-color: #F5F5F5; /* Very light grey */
+    background-color: white; /* White background */
     text-align: center;
-    padding: 40px 20px;
-}
-
-.how-biodiversity-impacts h2 {
-    color: #4CAF50; /* Green heading */
-    font-size: 1.8em;
-    margin-bottom: 30px;
 }
 
 .impact-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px; /* Increased gap */
 }
 
 .card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 15px;
-    width: 180px; /* Fixed width for cards */
+    background-color: #e8f5e9; /* Very light green for cards */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 25px;
+    width: 280px; /* Wider cards */
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .card .image-placeholder {
-    width: 100%;
-    height: 100px;
+    width: 100px; /* Smaller placeholders for cards */
+    height: 70px;
+    margin: 0 auto 15px auto; /* Center and add margin */
+}
+
+.card h3 {
+    font-size: 1.3em;
+    margin-top: 0;
     margin-bottom: 10px;
+    color: #388e3c; /* Darker green for card titles */
 }
 
 .card p {
-    font-weight: bold;
-    color: #333;
+    font-size: 0.95em;
+    color: #666;
 }
 
-/* City Harmony Section */
+/* City Harmony Section (Alternate background) */
+.section-alternate-bg {
+    background-color: #e0e0e0; /* Grey background, similar to biodiversity section */
+}
+
 .city-harmony-section {
-    background-color: #D3D3D3; /* Grey background, similar to biodiversity section */
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
-}
-
-.city-harmony-section h2 {
-    color: #4CAF50; /* Green heading */
-    font-size: 2em;
-    margin-bottom: 30px;
 }
 
 .harmony-content {
@@ -151,83 +235,238 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    max-width: 1000px; /* Limit content width */
-    margin: 0 auto;
+    gap: 50px;
 }
 
 .harmony-content .large-placeholder {
-    width: 250px; /* Larger placeholder for this section */
-    height: 180px;
+    width: 300px; /* Larger placeholder for this section */
+    height: 200px;
 }
 
 .text-block {
-    flex: 1; /* Takes up remaining space */
-    min-width: 300px; /* Minimum width before wrapping */
-    background-color: #C0D8C0; /* Light green/grey */
+    flex: 1.5; /* Takes more space */
+    min-width: 350px;
+    background-color: #c8e6c9; /* Light green/grey */
     border-radius: 15px;
-    padding: 20px;
-    text-align: left; /* Align text to the left within the block */
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* Footer Section */
-.footer-section {
-    background-color: #4CAF50; /* Green footer, similar to header */
+.text-block ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding: 0;
+    color: #555;
+}
+
+.text-block li {
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+
+/* Full Width Content for Challenges and Solutions */
+.content-full-width {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-full-width p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.solution-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.solution-card .icon-small {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px auto;
+    background-color: #a5d6a7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    color: #2e7d32;
+}
+/* Specific icons for solution cards */
+.icon-agroecology::before { content: '🌳'; }
+.icon-biotechnology::before { content: '🔬'; }
+.icon-conservation::before { content: '🌱'; }
+.icon-education::before { content: '📚'; }
+
+
+/* Call to Action Section */
+.call-to-action {
+    background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 15px 20px;
-    font-size: 0.9em;
+    padding: 60px 20px;
+    margin-top: 40px;
 }
 
-/* Basic Responsiveness */
-@media (max-width: 768px) {
+.call-to-action h2 {
+    color: white;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.call-to-action p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.call-to-action button {
+    background-color: white;
+    color: #4CAF50;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.call-to-action button:hover {
+    background-color: #e0e0e0;
+    color: #388e3c;
+    transform: translateY(-3px);
+}
+
+/* --- Footer Section --- */
+.footer-section {
+    background-color: #388e3c; /* Darker green footer */
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* --- Basic Responsiveness --- */
+@media (max-width: 1024px) {
     .hero-section h1 {
-        font-size: 1.8em;
+        font-size: 2.5em;
     }
-
     .hero-section p {
-        font-size: 1em;
+        font-size: 1.2em;
     }
+    .section-container h2 {
+        font-size: 2em;
+    }
+    .impact-cards, .harmony-content, .solution-grid {
+        gap: 20px;
+    }
+    .card {
+        width: 250px;
+    }
+}
 
-    .navigation-section {
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 15px;
+    }
+    .hero-section h1 {
+        font-size: 2em;
+    }
+    .hero-section p {
+        font-size: 1.1em;
+    }
+    .main-navigation {
         flex-direction: column;
         align-items: center;
     }
-
     .nav-item {
-        margin-bottom: 5px;
-        width: 80%; /* Make nav items wider on small screens */
+        margin: 5px 0;
+        width: 90%;
         text-align: center;
     }
-
+    .section-container {
+        padding: 40px 15px;
+    }
+    .section-container h2 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
     .biodiversity-future-section,
     .harmony-content {
         flex-direction: column;
-        align-items: center;
+        text-align: center; /* Center content when stacked */
     }
-
+    .content-left, .text-block {
+        text-align: center;
+        min-width: unset;
+    }
+    .content-left h2::after {
+        margin: 15px auto 0; /* Center underline when text is centered */
+    }
     .image-placeholders-right {
-        flex-direction: row; /* Keep images in a row if there are multiple small ones */
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    .image-placeholder, .large-placeholder {
+        width: 150px;
+        height: 100px;
+    }
     .card {
-        width: 150px; /* Adjust card width for smaller screens */
+        width: 90%; /* Make cards almost full width */
+    }
+    .call-to-action h2 {
+        font-size: 1.8em;
+    }
+    .call-to-action p {
+        font-size: 1em;
+    }
+    .solution-grid {
+        grid-template-columns: 1fr; /* Stack solutions on small screens */
     }
 }
 
 @media (max-width: 480px) {
+    .hero-section {
+        padding: 30px 10px;
+    }
     .hero-section h1 {
+        font-size: 1.6em;
+    }
+    .hero-section p {
+        font-size: 0.9em;
+    }
+    .section-container h2 {
         font-size: 1.5em;
     }
-
-    .card {
-        width: 90%; /* Make cards almost full width on very small screens */
+    .text-bubble, .text-block {
+        padding: 20px;
+        border-radius: 20px;
     }
-
     .image-placeholder, .large-placeholder {
-        width: 90%; /* Make placeholders wider on very small screens */
-        height: 120px;
+        width: 120px;
+        height: 80px;
     }
 }
