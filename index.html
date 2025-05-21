@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodiversidade e Agricultura Sustentável - Versão Base</title>
+    <title>Biodiversidade e Agricultura Sustentável</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -28,36 +28,34 @@
                 <div class="text-block">
                     <p>A biodiversidade é fundamental para uma agricultura moderna e sustentável. Tecnologias como a agricultura de precisão e o uso de espécies nativas aproveitam a diversidade biológica para aumentar a produção e reduzir impactos ambientais.</p>
                 </div>
-                <div class="image-placeholder placeholder-field"></div>
-            </div>
+                <div class="image-placeholder">🏞️</div> </div>
         </section>
 
         <section id="beneficios" class="section-container section-impactos">
             <h2>Como a biodiversidade impacta na agricultura?</h2>
             <div class="impact-cards-simple">
-                <div class="card-simple" data-modal-target="polinizacaoModal">
-                    <div class="icon-placeholder icon-bee"></div>
+                <div class="card-simple">
+                    <div class="icon-placeholder">🐝</div>
                     <p>Polinização</p>
-                    <button class="read-more-btn">Ver Mais</button>
+                    <a href="#polinizacaoModal" class="read-more-btn">Ver Mais</a>
                 </div>
-                <div class="card-simple" data-modal-target="controleBiologicoModal">
-                    <div class="icon-placeholder icon-ladybug"></div>
+                <div class="card-simple">
+                    <div class="icon-placeholder">🐞</div>
                     <p>Controle Biológico de Pragas</p>
-                    <button class="read-more-btn">Ver Mais</button>
+                    <a href="#controleBiologicoModal" class="read-more-btn">Ver Mais</a>
                 </div>
-                <div class="card-simple" data-modal-target="regulacaoClimaticaModal">
-                    <div class="icon-placeholder icon-rain"></div>
+                <div class="card-simple">
+                    <div class="icon-placeholder">🌧️</div>
                     <p>Regulação do clima</p>
-                    <button class="read-more-btn">Ver Mais</button>
+                    <a href="#regulacaoClimaticaModal" class="read-more-btn">Ver Mais</a>
                 </div>
-            </div>
+                </div>
         </section>
 
         <section id="conexao" class="section-container">
             <h2>Campo e cidade em harmonia</h2>
             <div class="content-wrapper">
-                <div class="image-placeholder placeholder-city-farm"></div>
-                <div class="text-block">
+                <div class="image-placeholder">🏙️🚜</div> <div class="text-block">
                     <p>A cidade representa um mercado consumidor importante, um centro de conhecimento e inovação, uma fonte de valorização da natureza e um palco para políticas e iniciativas que podem impulsionar e defender a proteção e o benefício da biodiversidade do campo.</p>
                 </div>
             </div>
@@ -70,7 +68,7 @@
 
     <div id="polinizacaoModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
+            <a href="#close" title="Fechar" class="close-btn">&times;</a>
             <h3>Polinização Essencial: O Serviço da Vida</h3>
             <p>A polinização, realizada por insetos (abelhas, borboletas), aves e até morcegos, é um serviço ecossistêmico vital. Estima-se que mais de 75% das culturas alimentares globais (frutas, vegetais, grãos e oleaginosas) dependam, em algum grau, desses polinizadores para sua reprodução e produção de frutos/sementes. A monocultura, a fragmentação de habitats e o uso excessivo e inadequado de agrotóxicos ameaçam essas populações, levando ao declínio de polinizadores e, consequentemente, comprometendo a produtividade e a diversidade de alimentos em nossas mesas. Promover corredores ecológicos, reduzir o uso de químicos e cultivar uma variedade de plantas floríferas são estratégias chave.</p>
         </div>
@@ -78,7 +76,7 @@
 
     <div id="controleBiologicoModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
+            <a href="#close" title="Fechar" class="close-btn">&times;</a>
             <h3>Controle Biológico de Pragas: A Natureza a Nosso Favor</h3>
             <p>A biodiversidade fornece um exército natural de predadores (como joaninhas que combatem pulgões), parasitoides (vespas que depositam ovos em lagartas) e patógenos (fungos ou bactérias específicos que causam doenças em insetos nocivos) que controlam naturalmente as populações de pragas agrícolas. Promover a presença e o habitat para esses agentes biológicos (através de plantas que oferecem abrigo e alimento) reduz drasticamente a necessidade de pesticidas químicos. Isso não só diminui os custos de produção, mas também protege a saúde humana, a qualidade da água e do solo, e mantém o equilíbrio do ecossistema agrícola.</p>
         </div>
@@ -86,12 +84,12 @@
 
     <div id="regulacaoClimaticaModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
+            <a href="#close" title="Fechar" class="close-btn">&times;</a>
             <h3>Regulação Climática e Hídrica: O Equilíbrio Essencial</h3>
             <p>Ecossistemas saudáveis, como florestas, áreas úmidas e solos ricos em matéria orgânica, atuam como poderosos reguladores do clima local e regional. Eles influenciam diretamente padrões de chuva, umidade do ar e temperatura, condições essenciais para o ciclo de vida e produtividade das culturas agrícolas. A vegetação densa aumenta a evapotranspiração, contribuindo para a formação de nuvens e chuvas. Além disso, uma cobertura vegetal e um solo bem estruturado melhoram a infiltração da água no solo, recarregando aquíferos, prevenindo enchentes e secas prolongadas, e mitigando os efeitos das mudanças climáticas.</p>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <div id="close"></div>
 </body>
 </html>
