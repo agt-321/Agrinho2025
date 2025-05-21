@@ -1,41 +1,233 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-:root {
-    --cor-principal: rgb(255, 255, 255);
-    --cor-secundaria: #ffffff;
-    --cor-destaque: #C92BFC;
-}
-
+/* General Body Styles */
 body {
-    font-family: 'Chakra Petch', sans-serif;
-    color: var(--cor-principal);
-    background-color: black; /* Fundo preto */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
 }
 
-h1, h2, h5 {
-    color: var(--cor-secundaria);
-    font-weight: 700;
+/* Hero Section (Green Top) */
+.hero-section {
+    background-color: #4CAF50; /* A shade of green */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-.lead, .btn-link {
-    color: var(--cor-destaque);
-    font-weight: 700;
+.hero-section h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
 }
 
-a, .btn-link:hover {
-    color: var(--cor-principal);
-}
-    
-a:hover {
-    color: var(--cor-destaque);
+.hero-section p {
+    margin: 0;
+    font-size: 1.2em;
 }
 
-/* Estilos adicionais para garantir legibilidade em fundo escuro */
+/* Navigation Section (Small Boxes) */
+.navigation-section {
+    background-color: #A0C8A0; /* Lighter green/greyish */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.nav-item {
+    background-color: #B0D8B0; /* Slightly different shade for items */
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Biodiversity Future Section */
+.biodiversity-future-section {
+    background-color: #D3D3D3; /* Grey background */
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 30px; /* Space between content and images */
+}
+
+.content-left {
+    flex: 1; /* Takes up available space */
+    min-width: 300px; /* Minimum width before wrapping */
+    text-align: center; /* Center text within its container */
+}
+
+.content-left h2 {
+    color: #4CAF50; /* Green heading */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.text-bubble {
+    background-color: #C0D8C0; /* Light green/grey for the bubble */
+    border-radius: 25px; /* Rounded corners */
+    padding: 20px 30px;
+    text-align: center;
+    max-width: 600px; /* Limit bubble width */
+    margin: 0 auto; /* Center the bubble */
+}
+
+.image-placeholders-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Center images if flex column */
+}
+
+.image-placeholder {
+    width: 150px; /* Example size */
+    height: 100px; /* Example size */
+    background-color: #DFF0D8; /* Very light green/blue for image placeholder */
+    border: 1px solid #C0D8C0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* How Biodiversity Impacts Section */
+.how-biodiversity-impacts {
+    background-color: #F5F5F5; /* Very light grey */
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.how-biodiversity-impacts h2 {
+    color: #4CAF50; /* Green heading */
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+.impact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 .card {
-    background-color: #700c0c; /* Cor de fundo das cartas alterada para #700c0c */
-    color: white; /* Cor do texto nas cartas */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 180px; /* Fixed width for cards */
+    text-align: center;
 }
 
-.card-title, .card-text {
-    color: white; /* Cor do texto nas cartas */
+.card .image-placeholder {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-weight: bold;
+    color: #333;
+}
+
+/* City Harmony Section */
+.city-harmony-section {
+    background-color: #D3D3D3; /* Grey background, similar to biodiversity section */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.city-harmony-section h2 {
+    color: #4CAF50; /* Green heading */
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.harmony-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px; /* Limit content width */
+    margin: 0 auto;
+}
+
+.harmony-content .large-placeholder {
+    width: 250px; /* Larger placeholder for this section */
+    height: 180px;
+}
+
+.text-block {
+    flex: 1; /* Takes up remaining space */
+    min-width: 300px; /* Minimum width before wrapping */
+    background-color: #C0D8C0; /* Light green/grey */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left; /* Align text to the left within the block */
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #4CAF50; /* Green footer, similar to header */
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+}
+
+/* Basic Responsiveness */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .navigation-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 5px;
+        width: 80%; /* Make nav items wider on small screens */
+        text-align: center;
+    }
+
+    .biodiversity-future-section,
+    .harmony-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-placeholders-right {
+        flex-direction: row; /* Keep images in a row if there are multiple small ones */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 150px; /* Adjust card width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.5em;
+    }
+
+    .card {
+        width: 90%; /* Make cards almost full width on very small screens */
+    }
+
+    .image-placeholder, .large-placeholder {
+        width: 90%; /* Make placeholders wider on very small screens */
+        height: 120px;
+    }
 }
