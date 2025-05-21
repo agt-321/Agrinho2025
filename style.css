@@ -1,34 +1,46 @@
 /* Importar fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@400;700&display=swap');
 
+/* Variáveis de Cores e Estilos */
 :root {
-    /* Paleta de Cores Verdes Aprimorada (do seu outro site) */
+    /* Paleta de Cores Mais Vibrante e Natural */
     --primary-green: #2E7D32; /* Verde floresta profundo */
-    --secondary-green: #4CAF50; /* Verde médio vibrante */
-    --accent-green: #66BB6A; /* Verde folha mais claro para destaques */
-    --dark-text-green: #1B5E20; /* Verde bem escuro para textos principais */
-    --light-bg-green: #F1F8E9; /* Fundo verde super suave */
-    --text-color: #333; /* Cor padrão do texto */
-    --white: #FFFFFF;
-    --soft-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --medium-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    --red-button: #D32F2F; /* Vermelho para o botão de fechar ou destaque */
-    --red-button-hover: #B71C1C;
+    --secondary-green: #689F38; /* Verde oliva vibrante */
+    --accent-green: #9CCC65; /* Verde limão claro para acentos */
+    --dark-text-color: #333333; /* Texto escuro padrão */
+    --light-text-color: #555555; /* Texto mais claro */
+    --background-light: #F9FBE7; /* Fundo creme/verde claríssimo */
+    --card-background: #FFFFFF; /* Fundo dos cards */
+    --border-light: #E0E0E0; /* Borda suave */
+
+    /* Sombras */
+    --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.12);
+    --shadow-large: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    /* Transições */
+    --transition-fast: 0.2s ease-out;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.7s ease-in-out; /* Para a expansão do conteúdo */
 }
 
+/* -------------------- */
+/* ESTILOS GERAIS/BASE */
+/* -------------------- */
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--light-bg-green); /* Fundo geral suave */
-    color: var(--text-color);
+    font-family: 'Roboto', sans-serif; /* Roboto para o corpo do texto */
+    background-color: var(--background-light);
+    color: var(--dark-text-color);
     line-height: 1.6;
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased; /* Para melhor renderização de fontes */
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Base de títulos */
 h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif; /* Usando Playfair Display para títulos */
-    color: var(--dark-text-green);
+    font-family: 'Merriweather', serif; /* Merriweather para títulos */
+    color: var(--primary-green);
     margin-top: 0;
     font-weight: 700;
 }
@@ -38,16 +50,18 @@ a {
     color: inherit;
 }
 
-/* Header Geral (agora como no seu outro site) */
+/* -------------------- */
+/* HEADER E NAVEGAÇÃO   */
+/* -------------------- */
 .header {
-    background-color: var(--primary-green); /* Verde floresta para o cabeçalho */
+    background-color: var(--primary-green);
     color: var(--white);
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: center;
-    box-shadow: var(--medium-shadow);
-    position: sticky; /* Sticky para a navegação */
+    box-shadow: var(--shadow-medium);
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Z-index alto para ficar por cima */
+    z-index: 1000;
 }
 
 .main-nav ul {
@@ -56,247 +70,266 @@ a {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap; /* Para responsividade da navegação */
+    gap: 35px; /* Aumentado o gap */
+    flex-wrap: wrap;
+    margin-bottom: 15px; /* Espaço entre navegação e título do header */
 }
 
 .main-nav a {
     color: var(--white);
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1em;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
+    font-weight: 400; /* Mais leve */
+    font-size: 1.05em;
+    padding: 8px 15px; /* Mais padding para botões maiores */
+    border-radius: 25px; /* Botões mais arredondados */
+    transition: background-color var(--transition-normal), transform var(--transition-fast);
 }
 
 .main-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.25); /* Um pouco mais opaco no hover */
+    transform: translateY(-2px);
 }
 
 .header-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2em;
+    font-family: 'Merriweather', serif;
+    font-size: 2.5em; /* Título do header um pouco maior */
     font-weight: 700;
-    margin-top: 15px;
-    text-align: center;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    color: var(--white); /* Garante que o título do header seja branco */
+    color: var(--white);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* Container principal para o conteúdo das seções */
+/* -------------------- */
+/* CONTAINER PRINCIPAL  */
+/* -------------------- */
 .container {
-    max-width: 1080px; /* Aumentei um pouco para ter mais espaço */
-    margin: 40px auto;
-    padding: 30px;
-    background-color: var(--white);
-    border-radius: 12px;
-    box-shadow: var(--medium-shadow);
+    max-width: 1100px; /* Largura levemente maior */
+    margin: 50px auto; /* Mais margem superior e inferior */
+    padding: 40px; /* Mais padding interno */
+    background-color: var(--card-background);
+    border-radius: 15px; /* Mais arredondamento */
+    box-shadow: var(--shadow-large); /* Sombra mais proeminente */
     position: relative;
     z-index: 1;
 }
 
-/* Hero Section (como no seu outro site) */
+/* -------------------- */
+/* HERO SECTION         */
+/* -------------------- */
 .hero-section {
     text-align: center;
-    margin-bottom: 60px;
-    padding: 40px 0;
-    background: linear-gradient(to right, rgba(241, 248, 233, 0.8), rgba(241, 248, 233, 0.95)); /* Fundo mais claro e suave */
-    border-radius: 8px;
-    box-shadow: var(--soft-shadow);
+    margin-bottom: 70px; /* Mais espaço abaixo do hero */
+    padding: 50px 0;
+    background: linear-gradient(to bottom right, rgba(249, 251, 231, 0.8), rgba(241, 248, 233, 0.95)); /* Gradiente sutil */
+    border-radius: 10px; /* Arredondamento */
+    box-shadow: var(--shadow-small);
 }
 
-.title h1 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 3.2em;
-    color: var(--dark-text-green); /* Verde escuro para o título principal */
-    margin: 0;
-    text-align: center;
+.title-group h1 {
+    font-size: 3.8em; /* Título principal maior */
+    color: var(--primary-green);
+    margin-bottom: 5px;
     line-height: 1.1;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.title h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4em; /* Mantido o tamanho grande para o destaque */
-    margin: 10px 0 20px;
-    color: var(--primary-green); /* Verde floresta para o subtítulo grande */
+.title-group h2 {
+    font-size: 4.8em; /* Subtítulo grande e impactante */
+    margin: 10px 0 25px;
+    color: var(--secondary-green); /* Nova cor */
     text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    letter-spacing: 3px; /* Mais espaçamento */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .subtitle {
-    font-size: 1.3em;
-    color: #666;
-    max-width: 600px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4em; /* Subtítulo descritivo */
+    color: var(--light-text-color);
+    max-width: 700px;
     margin: 0 auto;
-    text-align: center;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
-/* Seções de Conteúdo (Geral) */
+/* -------------------- */
+/* SEÇÕES DE CONTEÚDO   */
+/* -------------------- */
 .content-section {
-    padding: 40px 0;
-    text-align: center; /* Centraliza títulos e wrappers */
+    padding: 60px 0; /* Mais padding nas seções */
+    text-align: center;
 }
 
-.content-section h2 {
-    font-size: 2.5em; /* Título maior para seções */
-    margin-bottom: 30px;
+.section-heading {
+    font-size: 3em; /* Título das seções */
+    margin-bottom: 40px;
     color: var(--primary-green);
+    position: relative; /* Para o pseudo-elemento */
+    padding-bottom: 10px;
 }
 
-/* Wrapper para texto e imagem */
-.content-wrapper {
+.section-heading::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-green);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.content-flex-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* Espaçamento entre os elementos */
-    margin-top: 30px;
+    gap: 50px; /* Espaçamento generoso */
+    margin-top: 40px;
 }
 
-.text-block {
-    flex: 2; /* Permite que o bloco de texto seja maior */
-    min-width: 350px; /* Largura mínima para o texto */
-    max-width: 600px; /* Largura máxima para o texto */
-    text-align: left; /* Alinha o texto à esquerda dentro do bloco */
-    background-color: var(--white); /* Fundo branco para o bloco de texto */
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: var(--soft-shadow);
+.text-card {
+    flex: 2;
+    min-width: 380px; /* Largura mínima para o texto */
+    max-width: 650px; /* Largura máxima para o texto */
+    text-align: left;
+    background-color: var(--background-light); /* Fundo mais claro para blocos de texto */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-small);
 }
 
-.text-block p {
-    font-size: 1.1em;
-    color: var(--text-color);
+.text-card p {
+    font-size: 1.15em;
+    color: var(--light-text-color);
+    margin-bottom: 15px;
 }
 
-/* Placeholders de Imagem para seções */
-.image-placeholder {
-    flex: 1; /* Permite que o placeholder ocupe o espaço restante */
-    min-width: 250px;
-    height: 200px;
-    background-color: #d8e6d8; /* Verde claro para o fundo */
-    border: 2px solid var(--accent-green); /* Borda sólida */
-    border-radius: 10px;
+.text-card p strong {
+    color: var(--dark-text-color);
+}
+
+.image-display-box {
+    flex: 1;
+    min-width: 300px; /* Largura mínima para a imagem */
+    height: 250px; /* Altura fixa */
+    background-color: var(--secondary-green); /* Fundo caso a imagem não carregue */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-small);
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Garante que a imagem não vaze */
-    position: relative; /* Para img absolute */
 }
 
-.image-placeholder img {
+.image-display-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cobre a área sem distorcer, cortando se necessário */
+    object-fit: cover; /* Cobre a área sem distorcer */
     display: block;
-    border-radius: 10px; /* Herda o border-radius do pai */
+    transition: transform 0.4s ease-out; /* Transição para o hover */
+}
+
+.image-display-box img:hover {
+    transform: scale(1.05); /* Pequeno zoom no hover */
 }
 
 
-/* Grid para os cards de benefícios (plant-card do seu outro site) */
-.grid {
+/* -------------------- */
+/* CARDS DE INFORMAÇÃO  */
+/* -------------------- */
+.cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustado o minmax */
-    gap: 30px;
-    justify-content: center; /* Centraliza o grid se houver espaço */
-    align-items: stretch; /* Garante que os cards tenham a mesma altura */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Min-width ajustado */
+    gap: 35px; /* Mais espaçamento entre cards */
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 40px;
 }
 
-.plant-card {
-    background-color: var(--white);
-    border-radius: 10px;
+.info-card {
+    background-color: var(--card-background);
+    border-radius: 12px; /* Mais arredondamento */
     overflow: hidden;
-    box-shadow: var(--soft-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-small);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 20px; /* Mais padding */
     display: flex;
     flex-direction: column;
     position: relative;
+    border: 1px solid var(--border-light); /* Borda sutil */
 }
 
-.plant-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--medium-shadow);
+.info-card:hover {
+    transform: translateY(-8px); /* Mais elevação no hover */
+    box-shadow: var(--shadow-medium);
 }
 
-/* As "plant-box" agora são os containers das imagens dos cards */
-.plant-box {
-    height: 160px; /* Altura do espaço para a imagem */
-    background-color: var(--secondary-green); /* Fundo caso a imagem não carregue */
+.card-image-container {
+    height: 180px; /* Altura das imagens dos cards */
+    background-color: var(--accent-green); /* Fundo se a imagem não carregar */
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px 10px 0 0;
-    overflow: hidden; /* Garante que a imagem se ajuste ao border-radius */
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
     position: relative;
 }
 
-.plant-box img {
+.card-image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cobre a área sem distorcer, cortando se necessário */
+    object-fit: cover;
     display: block;
+    transition: transform 0.4s ease-out; /* Transição para o hover */
 }
 
-/* Nome da planta/benefício */
-.plant-name-label {
-    font-family: 'Montserrat', sans-serif; /* Montserrat para nomes */
-    color: var(--dark-text-green);
-    font-weight: 700;
-    font-size: 1.3em;
-    padding: 15px 15px 5px;
+.card-image-container img:hover {
+    transform: scale(1.08); /* Mais zoom no hover */
+}
+
+.card-title {
+    font-size: 1.4em; /* Título dos cards */
+    color: var(--primary-green);
+    padding: 20px 15px 10px;
     margin: 0;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
 }
 
-.description {
-    font-family: 'Montserrat', sans-serif;
-    padding: 0 15px;
-    font-size: 0.95em;
-    color: #555;
-    margin-bottom: 15px;
-    flex-grow: 1; /* Permite que a descrição ocupe o espaço disponível */
+.card-description {
+    font-size: 1em;
+    color: var(--light-text-color);
+    padding: 0 20px;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
-/* Oculta o checkbox real */
+/* -------------------- */
+/* "VER MAIS" FUNCIONALIDADE (Checkbox Trick) */
+/* -------------------- */
 .read-more-toggle {
     display: none;
 }
 
-/* Estilo do label (que age como botão) - EXATAMENTE IGUAL ao seu site */
 .read-more-btn {
     display: inline-block;
-    background-color: var(--secondary-green); /* Verde vibrante para o botão */
+    background-color: var(--secondary-green);
     color: var(--white);
-    padding: 8px 15px;
+    padding: 10px 20px; /* Mais padding para o botão */
     border: none;
-    border-radius: 5px;
+    border-radius: 25px; /* Botão bem arredondado */
     cursor: pointer;
-    margin-top: auto; /* Empurra o botão para o final da card */
-    font-size: 0.95em;
+    margin-top: auto;
+    font-size: 0.98em;
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    align-self: center; /* Centraliza o botão horizontalmente */
-    position: relative;
-    min-width: 120px;
+    transition: background-color var(--transition-normal), transform var(--transition-fast), box-shadow var(--transition-normal);
+    align-self: center;
+    min-width: 140px; /* Largura mínima do botão */
     text-align: center;
-    z-index: 1;
-    /* Adicionado para o texto "Ver Mais/Menos" */
-    line-height: 1; /* Garante que o texto não tenha altura extra */
+    box-shadow: var(--shadow-small);
 }
 
 .read-more-btn:hover {
-    background-color: var(--primary-green); /* Escurece no hover */
-    transform: translateY(-2px);
+    background-color: var(--primary-green);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
 }
 
 .read-more-btn .btn-text-less {
@@ -311,96 +344,118 @@ a {
     display: inline;
 }
 
-/* Estilo para a caixa que abre abaixo do botão (dropdown) - EXATAMENTE IGUAL ao seu site */
 .more-info-content {
-    max-height: 0; /* Começa com altura zero, escondido */
-    overflow: hidden; /* Esconde o conteúdo que excede a altura */
-    padding: 0 15px; /* Padding inicial zero */
-    transition: max-height 0.7s ease-in-out, padding 0.7s ease-in-out, opacity 0.5s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px; /* Padding ajustado */
+    transition: max-height var(--transition-slow), padding var(--transition-slow), opacity 0.5s ease-out;
     text-align: left;
     width: 100%;
     box-sizing: border-box;
     flex-shrink: 0;
-    background-color: var(--light-bg-green); /* Fundo verde claro para a caixa */
-    border-top: 1px solid var(--accent-green); /* Linha divisória sutil */
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03); /* Sombra interna sutil */
-    margin-top: 10px; /* Espaço entre o botão e o início do conteúdo expandido */
-    opacity: 0; /* Começa invisível */
+    background-color: var(--background-light); /* Fundo da área expandida */
+    border-top: 1px solid var(--accent-green);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+    margin-top: 15px; /* Mais espaço entre botão e conteúdo */
+    opacity: 0;
+    border-radius: 0 0 12px 12px; /* Arredondamento inferior */
 }
 
-/* Quando o checkbox está marcado, o conteúdo se expande e aparece */
 .read-more-toggle:checked ~ .more-info-content {
-    max-height: 1000px; /* Valor alto para acomodar o texto */
-    padding: 15px; /* Adiciona padding quando expandido */
-    opacity: 1; /* Torna visível */
+    max-height: 1200px; /* Aumentado para garantir espaço */
+    padding: 20px; /* Padding quando expandido */
+    opacity: 1;
 }
 
 .more-info-content p {
     margin: 0;
     padding-bottom: 10px;
-    color: var(--text-color);
+    color: var(--light-text-color);
+    font-size: 0.95em;
 }
 
 .more-info-content p strong {
     font-weight: bold;
-    color: var(--dark-text-green);
+    color: var(--dark-text-color);
 }
 
-/* Footer (como no seu outro site) */
+/* -------------------- */
+/* FOOTER               */
+/* -------------------- */
 .footer {
     text-align: center;
     color: var(--white);
-    font-size: 0.9em;
-    margin-top: 50px;
-    padding: 20px;
-    background-color: var(--primary-green); /* Verde floresta para o rodapé */
-    border-radius: 10px 10px 0 0;
-    box-shadow: var(--medium-shadow);
+    font-size: 0.95em;
+    margin-top: 70px; /* Mais margem superior */
+    padding: 25px; /* Mais padding */
+    background-color: var(--primary-green);
+    border-radius: 12px 12px 0 0; /* Arredondamento superior */
+    box-shadow: var(--shadow-medium);
 }
 
 .footer .github-link {
-    margin-top: 10px;
-    font-size: 1.8em;
+    margin-top: 15px; /* Mais espaço */
+    font-size: 2em; /* Ícone maior */
 }
 
 .footer .github-link a {
     color: var(--white);
-    transition: color 0.3s ease;
+    transition: color var(--transition-normal);
 }
 
 .footer .github-link a:hover {
-    color: var(--accent-green); /* Verde no hover do ícone */
+    color: var(--accent-green);
 }
 
-/* Responsividade */
+/* -------------------- */
+/* RESPONSIVIDADE       */
+/* -------------------- */
 @media (max-width: 1024px) {
     .container {
-        padding: 25px;
-        margin: 30px auto;
+        padding: 30px;
+        margin: 40px auto;
     }
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    .main-nav ul {
         gap: 25px;
     }
-    .plant-card {
-        padding-bottom: 10px;
+    .header-title {
+        font-size: 2.2em;
     }
-    .plant-box {
-        height: 140px;
+    .title-group h1 {
+        font-size: 3.2em;
     }
-    .content-wrapper {
+    .title-group h2 {
+        font-size: 4em;
+        letter-spacing: 2px;
+    }
+    .subtitle {
+        font-size: 1.2em;
+    }
+    .section-heading {
+        font-size: 2.5em;
+    }
+    .content-flex-wrapper {
+        gap: 40px;
+    }
+    .text-card {
+        min-width: 350px;
+        padding: 25px;
+    }
+    .image-display-box {
+        min-width: 250px;
+        height: 200px;
+    }
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 30px;
     }
-    .text-block {
-        min-width: 300px;
-        padding: 20px;
+    .info-card {
+        padding-bottom: 15px;
     }
-    .image-placeholder {
-        min-width: 200px;
+    .card-image-container {
         height: 160px;
     }
 }
-
 
 @media (max-width: 768px) {
     .header-title {
@@ -408,90 +463,114 @@ a {
     }
     .main-nav ul {
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
+        margin-bottom: 10px;
     }
     .main-nav a {
-        padding: 8px 10px;
-        font-size: 1em;
+        padding: 10px 20px;
+        font-size: 0.95em;
     }
-    .title h1 {
-        font-size: 2.5em;
+    .title-group h1 {
+        font-size: 2.8em;
     }
-    .title h2 {
-        font-size: 3em;
+    .title-group h2 {
+        font-size: 3.5em;
         letter-spacing: 1px;
     }
     .subtitle {
         font-size: 1.1em;
     }
     .container {
-        margin: 20px auto;
+        margin: 30px auto;
+        padding: 25px;
+    }
+    .content-section {
+        padding: 40px 0;
+    }
+    .section-heading {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+    .content-flex-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .text-card {
+        min-width: unset;
+        max-width: 100%;
+        text-align: center;
         padding: 20px;
     }
-    .content-section h2 {
-        font-size: 2em;
+    .image-display-box {
+        width: 100%;
+        max-width: 300px; /* Limita a largura em telas muito pequenas */
+        height: 180px;
     }
-    .content-wrapper {
-        flex-direction: column; /* Pilha os blocos de texto e imagem */
-        gap: 20px;
+    .cards-grid {
+        grid-template-columns: 1fr; /* Um card por linha em telas menores */
+        gap: 25px;
     }
-    .text-block {
-        min-width: unset; /* Remove a largura mínima para telas menores */
-        max-width: 100%;
-        text-align: center; /* Centraliza o texto em telas menores */
-    }
-    .image-placeholder {
-        width: 100%; /* Ocupa a largura total disponível */
-        max-width: 250px; /* Limita a largura em telas muito pequenas */
-        height: 150px;
-    }
-    .grid {
-        grid-template-columns: 1fr; /* Um card por linha em telas muito pequenas */
-        gap: 20px;
-    }
-    .plant-card {
-        width: 100%; /* Ocupa a largura total disponível */
-        max-width: 300px; /* Limita em telas maiores */
+    .info-card {
+        max-width: 350px; /* Limita a largura do card em telas menores */
         margin: 0 auto; /* Centraliza o card individualmente */
     }
-    .plant-box {
-        height: 120px;
+    .card-image-container {
+        height: 140px;
     }
-    .plant-name-label {
-        font-size: 1.2em;
+    .card-title {
+        font-size: 1.3em;
     }
-    .description {
+    .card-description {
         font-size: 0.9em;
     }
     .read-more-btn {
         font-size: 0.9em;
-        padding: 7px 12px;
+        padding: 8px 15px;
+    }
+    .more-info-content {
+        padding: 15px;
+    }
+    .footer {
+        margin-top: 50px;
+        padding: 20px;
+    }
+    .footer .github-link {
+        font-size: 1.5em;
     }
 }
 
 @media (max-width: 480px) {
     .header-title {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
-    .title h1 {
-        font-size: 2em;
+    .title-group h1 {
+        font-size: 2.2em;
     }
-    .title h2 {
-        font-size: 2.5em;
+    .title-group h2 {
+        font-size: 2.8em;
     }
     .subtitle {
-        font-size: 1em;
+        font-size: 0.95em;
     }
     .container {
         padding: 15px;
     }
-    .content-section h2 {
+    .content-section {
+        padding: 30px 0;
+    }
+    .section-heading {
         font-size: 1.8em;
     }
-    .image-placeholder {
+    .text-card p {
+        font-size: 1em;
+    }
+    .image-display-box {
+        height: 150px;
+    }
+    .card-image-container {
         height: 120px;
     }
-    .plant-box {
-        height: 100px;
+    .card-title {
+        font-size: 1.15em;
     }
 }
