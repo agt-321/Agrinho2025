@@ -4,92 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biodiversidade e Agricultura Sustentável</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero-section">
-        <div class="hero-content">
-            <h1>A Importância da Biodiversidade para a Agricultura</h1>
-            <p>Inovação agrícola para um futuro sustentável</p>
-        </div>
+
+    <header class="header">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#hero-section">Início</a></li>
+                <li><a href="#importancia-geral">Importância</a></li>
+                <li><a href="#beneficios">Impacto</a></li>
+                <li><a href="#conexao">Conexão</a></li>
+            </ul>
+        </nav>
+        <div class="header-title">O Agro Sustentável</div>
     </header>
 
-    <nav class="main-navigation">
-        <a href="#importancia-geral" class="nav-item">Importância</a>
-        <a href="#conexao" class="nav-item">Conexão</a>
-        <a href="#beneficios" class="nav-item">Impacto</a>
-    </nav>
+    <main class="container">
+        <section id="hero-section" class="hero-section">
+            <div class="title">
+                <h1>Biodiversidade</h1>
+                <h2>O Alicerce da Agricultura do Futuro</h2>
+                <p class="subtitle">Inovação e Resiliência para um Agro Sustentável</p>
+            </div>
+        </section>
 
-    <main>
-        <section id="importancia-geral" class="section-container">
-            <h2>Biodiversidade futuro do Agro</h2>
+        <section id="importancia-geral" class="content-section">
+            <h2>Biodiversidade: A Base de Tudo</h2>
             <div class="content-wrapper">
                 <div class="text-block">
-                    <p>A biodiversidade é fundamental para uma agricultura moderna e sustentável. Tecnologias como a agricultura de precisão e o uso de espécies nativas aproveitam a diversidade biológica para aumentar a produção e reduzir impactos ambientais.</p>
+                    <p>A biodiversidade é a <strong>coluna vertebral</strong> de uma agricultura moderna, produtiva e sustentável. Ela oferece a resiliência e a adaptabilidade necessárias para enfrentar desafios globais como a segurança alimentar e as mudanças climáticas.</p>
+                    <p>Ferramentas como a agricultura de precisão e o uso inteligente de espécies nativas aproveitam essa diversidade biológica, visando não só a otimização da produção, mas também a redução dos impactos ambientais e a construção de sistemas agrícolas mais harmoniosos com a natureza.</p>
                 </div>
-                <div class="image-placeholder">🏞️</div> </div>
+                <div class="image-placeholder placeholder-field"></div> </div>
         </section>
 
-        <section id="beneficios" class="section-container section-impactos">
-            <h2>Como a biodiversidade impacta na agricultura?</h2>
-            <div class="impact-cards-simple">
-                <div class="card-simple">
-                    <div class="icon-placeholder">🐝</div>
-                    <p>Polinização</p>
-                    <a href="#polinizacaoModal" class="read-more-btn">Ver Mais</a>
-                </div>
-                <div class="card-simple">
-                    <div class="icon-placeholder">🐞</div>
-                    <p>Controle Biológico de Pragas</p>
-                    <a href="#controleBiologicoModal" class="read-more-btn">Ver Mais</a>
-                </div>
-                <div class="card-simple">
-                    <div class="icon-placeholder">🌧️</div>
-                    <p>Regulação do clima</p>
-                    <a href="#regulacaoClimaticaModal" class="read-more-btn">Ver Mais</a>
-                </div>
-                </div>
+        <section id="beneficios" class="content-section">
+            <h2>Benefícios Essenciais da Biodiversidade no Agro</h2>
+            <div class="grid">
+
+                <article class="plant-card">
+                    <figure class="plant-box icon-bee"></figure> <h3 class="plant-name-label">Polinização Essencial</h3>
+                    <p class="description">Mais de 75% das culturas dependem de polinizadores. Agrotóxicos ameaçam essas populações, impactando a produção de alimentos.</p>
+                    <input type="checkbox" id="toggle-polinizacao" class="read-more-toggle">
+                    <label for="toggle-polinizacao" class="read-more-btn">
+                        <span class="btn-text-more">Ver Mais</span>
+                        <span class="btn-text-less">Ver Menos</span>
+                    </label>
+                    <div class="more-info-content">
+                        <p>A <strong>polinização</strong>, realizada por insetos (abelhas, borboletas), aves e até morcegos, é um serviço ecossistêmico vital. Estima-se que mais de 75% das culturas alimentares globais (frutas, vegetais, grãos e oleaginosas) dependam, em algum grau, desses polinizadores para sua reprodução e produção de frutos/sementes. A monocultura, a fragmentação de habitats e o uso excessivo e inadequado de agrotóxicos ameaçam essas populações, levando ao declínio de polinizadores e, consequentemente, comprometendo a produtividade e a diversidade de alimentos em nossas mesas. Promover corredores ecológicos, reduzir o uso de químicos e cultivar uma variedade de plantas floríferas são estratégias chave.</p>
+                    </div>
+                </article>
+
+                <article class="plant-card">
+                    <figure class="plant-box icon-ladybug"></figure>
+                    <h3 class="plant-name-label">Controle Biológico de Pragas</h3>
+                    <p class="description">A biodiversidade oferece predadores e patógenos naturais que controlam pragas, reduzindo a dependência de pesticidas.</p>
+                    <input type="checkbox" id="toggle-controle-biologico" class="read-more-toggle">
+                    <label for="toggle-controle-biologico" class="read-more-btn">
+                        <span class="btn-text-more">Ver Mais</span>
+                        <span class="btn-text-less">Ver Menos</span>
+                    </label>
+                    <div class="more-info-content">
+                        <p>A biodiversidade fornece um exército natural de predadores (como joaninhas que combatem pulgões), parasitoides (vespas que depositam ovos em lagartas) e patógenos (fungos ou bactérias específicos que causam doenças em insetos nocivos) que controlam naturalmente as populações de pragas agrícolas. Promover a presença e o habitat para esses agentes biológicos (através de plantas que oferecem abrigo e alimento) reduz drasticamente a necessidade de pesticidas químicos. Isso não só diminui os custos de produção, mas também protege a saúde humana, a qualidade da água e do solo, e mantém o equilíbrio do ecossistema agrícola.</p>
+                    </div>
+                </article>
+
+                <article class="plant-card">
+                    <figure class="plant-box icon-rain"></figure>
+                    <h3 class="plant-name-label">Regulação Climática e Hídrica</h3>
+                    <p class="description">Florestas e solos saudáveis regulam o clima, influenciando chuvas e temperaturas, e prevenindo secas e erosão.</p>
+                    <input type="checkbox" id="toggle-regulacao-climatica" class="read-more-toggle">
+                    <label for="toggle-regulacao-climatica" class="read-more-btn">
+                        <span class="btn-text-more">Ver Mais</span>
+                        <span class="btn-text-less">Ver Menos</span>
+                    </label>
+                    <div class="more-info-content">
+                        <p>Ecossistemas saudáveis, como florestas, áreas úmidas e solos ricos em matéria orgânica, atuam como poderosos reguladores do clima local e regional. Eles influenciam diretamente padrões de chuva, umidade do ar e temperatura, condições essenciais para o ciclo de vida e produtividade das culturas agrícolas. A vegetação densa aumenta a evapotranspiração, contribuindo para a formação de nuvens e chuvas. Além disso, uma cobertura vegetal e um solo bem estruturado melhoram a infiltração da água no solo, recarregando aquíferos, prevenindo enchentes e secas prolongadas, e mitigando os efeitos das mudanças climáticas.</p>
+                    </div>
+                </article>
+
+                <article class="plant-card">
+                    <figure class="plant-box icon-soil"></figure>
+                    <h3 class="plant-name-label">Saúde e Fertilidade do Solo</h3>
+                    <p class="description">Solos ricos em microrganismos e invertebrados são vitais para a ciclagem de nutrientes, tornando o solo mais fértil.</p>
+                    <input type="checkbox" id="toggle-solo-saude" class="read-more-toggle">
+                    <label for="toggle-solo-saude" class="read-more-btn">
+                        <span class="btn-text-more">Ver Mais</span>
+                        <span class="btn-text-less">Ver Menos</span>
+                    </label>
+                    <div class="more-info-content">
+                        <p>O solo não é apenas terra; é um ecossistema vivo e vibrante, repleto de bilhões de microrganismos (bactérias, fungos, algas), invertebrados (minhocas, insetos) e raízes de plantas. Essa vasta diversidade microbiana e macrofauna é crucial para processos vitais como a decomposição de matéria orgânica, a ciclagem de nutrientes essenciais (nitrogênio, fósforo, potássio) e a estruturação do solo. Um solo saudável é mais fértil, possui melhor aeração, maior capacidade de retenção de água e nutrientes, e oferece um ambiente ideal para o desenvolvimento vigoroso das raízes das plantas, resultando em culturas mais produtivas e resistentes.</p>
+                    </div>
+                </article>
+
+                <article class="plant-card">
+                    <figure class="plant-box icon-gene"></figure>
+                    <h3 class="plant-name-label">Recursos Genéticos e Resiliência</h3>
+                    <p class="description">A variabilidade genética oferece resistência a doenças e adversidades, permitindo o desenvolvimento de culturas adaptadas.</p>
+                    <input type="checkbox" id="toggle-recursos-geneticos" class="read-more-toggle">
+                    <label for="toggle-recursos-geneticos" class="read-more-btn">
+                        <span class="btn-text-more">Ver Mais</span>
+                        <span class="btn-text-less">Ver Menos</span>
+                    </label>
+                    <div class="more-info-content">
+                        <p>A variabilidade genética, tanto dentro das espécies cultivadas (diferentes variedades de milho, feijão, etc.) quanto em seus parentes selvagens, é um "banco de dados" natural e insubstituível. Essa diversidade genética contém as chaves para a resistência a novas doenças, pragas emergentes e condições climáticas extremas (secas, inundações, temperaturas elevadas). A conservação dessa riqueza genética, em bancos de sementes e in situ (em seus habitats naturais), permite que cientistas e melhoristas desenvolvam continuamente novas variedades de culturas que são mais resilientes, nutritivas e adaptadas aos desafios futuros, garantindo a segurança alimentar a longo prazo para a humanidade.</p>
+                    </div>
+                </article>
+
+            </div>
         </section>
 
-        <section id="conexao" class="section-container">
-            <h2>Campo e cidade em harmonia</h2>
+        <section id="conexao" class="content-section">
+            <h2>Campo e Cidade: Uma Conexão Essencial</h2>
             <div class="content-wrapper">
-                <div class="image-placeholder">🏙️🚜</div> <div class="text-block">
-                    <p>A cidade representa um mercado consumidor importante, um centro de conhecimento e inovação, uma fonte de valorização da natureza e um palco para políticas e iniciativas que podem impulsionar e defender a proteção e o benefício da biodiversidade do campo.</p>
+                <div class="image-placeholder placeholder-city-farm"></div>
+                <div class="text-block">
+                    <p>A relação entre campo e cidade é de interdependência. A cidade é um <strong>mercado consumidor vital</strong> e um <strong>centro de inovação</strong> que impulsiona o desenvolvimento rural. As áreas urbanas também valorizam a natureza do campo e são cruciais para o apoio a políticas públicas que promovem a sustentabilidade e a biodiversidade.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer-section">
-        <p>agrinho 2025</p>
+    <footer class="footer" id="contato">
+        <p>&copy; 2025 Agrinho - Todos os direitos reservados.</p>
+        <p class="github-link">
+            <a href="https://github.com/Rodrigo1010-01" target="_blank" rel="noopener noreferrer" aria-label="Meu perfil no GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </p>
     </footer>
 
-    <div id="polinizacaoModal" class="modal">
-        <div class="modal-content">
-            <a href="#close" title="Fechar" class="close-btn">&times;</a>
-            <h3>Polinização Essencial: O Serviço da Vida</h3>
-            <p>A polinização, realizada por insetos (abelhas, borboletas), aves e até morcegos, é um serviço ecossistêmico vital. Estima-se que mais de 75% das culturas alimentares globais (frutas, vegetais, grãos e oleaginosas) dependam, em algum grau, desses polinizadores para sua reprodução e produção de frutos/sementes. A monocultura, a fragmentação de habitats e o uso excessivo e inadequado de agrotóxicos ameaçam essas populações, levando ao declínio de polinizadores e, consequentemente, comprometendo a produtividade e a diversidade de alimentos em nossas mesas. Promover corredores ecológicos, reduzir o uso de químicos e cultivar uma variedade de plantas floríferas são estratégias chave.</p>
-        </div>
-    </div>
-
-    <div id="controleBiologicoModal" class="modal">
-        <div class="modal-content">
-            <a href="#close" title="Fechar" class="close-btn">&times;</a>
-            <h3>Controle Biológico de Pragas: A Natureza a Nosso Favor</h3>
-            <p>A biodiversidade fornece um exército natural de predadores (como joaninhas que combatem pulgões), parasitoides (vespas que depositam ovos em lagartas) e patógenos (fungos ou bactérias específicos que causam doenças em insetos nocivos) que controlam naturalmente as populações de pragas agrícolas. Promover a presença e o habitat para esses agentes biológicos (através de plantas que oferecem abrigo e alimento) reduz drasticamente a necessidade de pesticidas químicos. Isso não só diminui os custos de produção, mas também protege a saúde humana, a qualidade da água e do solo, e mantém o equilíbrio do ecossistema agrícola.</p>
-        </div>
-    </div>
-
-    <div id="regulacaoClimaticaModal" class="modal">
-        <div class="modal-content">
-            <a href="#close" title="Fechar" class="close-btn">&times;</a>
-            <h3>Regulação Climática e Hídrica: O Equilíbrio Essencial</h3>
-            <p>Ecossistemas saudáveis, como florestas, áreas úmidas e solos ricos em matéria orgânica, atuam como poderosos reguladores do clima local e regional. Eles influenciam diretamente padrões de chuva, umidade do ar e temperatura, condições essenciais para o ciclo de vida e produtividade das culturas agrícolas. A vegetação densa aumenta a evapotranspiração, contribuindo para a formação de nuvens e chuvas. Além disso, uma cobertura vegetal e um solo bem estruturado melhoram a infiltração da água no solo, recarregando aquíferos, prevenindo enchentes e secas prolongadas, e mitigando os efeitos das mudanças climáticas.</p>
-        </div>
-    </div>
-
-    <div id="close"></div>
 </body>
 </html>
