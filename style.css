@@ -1,22 +1,22 @@
 /* Importar fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
 
-/* Variáveis de Cores e Estilos */
+/* Variáveis de Cores e Estilos (Atualizadas) */
 :root {
-    /* Paleta de Cores Mais Vibrante e Natural */
-    --primary-green: #2E7D32; /* Verde floresta profundo */
-    --secondary-green: #689F38; /* Verde oliva vibrante */
-    --accent-green: #9CCC65; /* Verde limão claro para acentos */
-    --dark-text-color: #333333; /* Texto escuro padrão */
-    --light-text-color: #555555; /* Texto mais claro */
-    --background-light: #F9FBE7; /* Fundo creme/verde claríssimo */
+    /* Paleta de Cores Mais Profunda e Natural */
+    --primary-green: #1B5E20; /* Verde escuro forte */
+    --secondary-green: #388E3C; /* Verde médio vibrante */
+    --accent-green: #81C784; /* Verde claro para acentos */
+    --dark-text-color: #212121; /* Texto muito escuro */
+    --light-text-color: #424242; /* Texto mais suave */
+    --background-light: #E8F5E9; /* Fundo verde super suave */
     --card-background: #FFFFFF; /* Fundo dos cards */
-    --border-light: #E0E0E0; /* Borda suave */
+    --border-light: #CFD8DC; /* Borda cinza suave */
 
-    /* Sombras */
-    --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.08);
-    --shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.12);
-    --shadow-large: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* Sombras Aprimoradas */
+    --shadow-small: 0 3px 8px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 6px 16px rgba(0, 0, 0, 0.12);
+    --shadow-large: 0 12px 28px rgba(0, 0, 0, 0.18);
 
     /* Transições */
     --transition-fast: 0.2s ease-out;
@@ -29,17 +29,17 @@
 /* -------------------- */
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif; /* Roboto para o corpo do texto */
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--background-light);
     color: var(--dark-text-color);
     line-height: 1.6;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased; /* Para melhor renderização de fontes */
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Merriweather', serif; /* Merriweather para títulos */
+    font-family: 'Playfair Display', serif;
     color: var(--primary-green);
     margin-top: 0;
     font-weight: 700;
@@ -55,8 +55,8 @@ a {
 /* -------------------- */
 .header {
     background-color: var(--primary-green);
-    color: var(--white);
-    padding: 20px 0;
+    color: var(--card-background);
+    padding: 20px 0; /* Aumentado padding */
     text-align: center;
     box-shadow: var(--shadow-medium);
     position: sticky;
@@ -70,31 +70,31 @@ a {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 35px; /* Aumentado o gap */
+    gap: 40px; /* Aumentado o gap */
     flex-wrap: wrap;
     margin-bottom: 15px; /* Espaço entre navegação e título do header */
 }
 
 .main-nav a {
-    color: var(--white);
+    color: var(--card-background);
     text-decoration: none;
-    font-weight: 400; /* Mais leve */
-    font-size: 1.05em;
-    padding: 8px 15px; /* Mais padding para botões maiores */
-    border-radius: 25px; /* Botões mais arredondados */
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 10px 18px; /* Mais padding */
+    border-radius: 8px; /* Leve arredondamento */
     transition: background-color var(--transition-normal), transform var(--transition-fast);
 }
 
 .main-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.25); /* Um pouco mais opaco no hover */
+    background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
 
 .header-title {
-    font-family: 'Merriweather', serif;
-    font-size: 2.5em; /* Título do header um pouco maior */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em; /* Título do header maior */
     font-weight: 700;
-    color: var(--white);
+    color: var(--card-background);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -102,12 +102,12 @@ a {
 /* CONTAINER PRINCIPAL  */
 /* -------------------- */
 .container {
-    max-width: 1100px; /* Largura levemente maior */
-    margin: 50px auto; /* Mais margem superior e inferior */
-    padding: 40px; /* Mais padding interno */
+    max-width: 1000px; /* Largura levemente menor para um feel mais contido */
+    margin: 50px auto;
+    padding: 35px;
     background-color: var(--card-background);
     border-radius: 15px; /* Mais arredondamento */
-    box-shadow: var(--shadow-large); /* Sombra mais proeminente */
+    box-shadow: var(--shadow-large);
     position: relative;
     z-index: 1;
 }
@@ -117,155 +117,155 @@ a {
 /* -------------------- */
 .hero-section {
     text-align: center;
-    margin-bottom: 70px; /* Mais espaço abaixo do hero */
-    padding: 50px 0;
-    background: linear-gradient(to bottom right, rgba(249, 251, 231, 0.8), rgba(241, 248, 233, 0.95)); /* Gradiente sutil */
-    border-radius: 10px; /* Arredondamento */
+    margin-bottom: 60px;
+    padding: 50px 0; /* Mais padding */
+    background: linear-gradient(to right, rgba(232, 245, 233, 0.8), rgba(240, 247, 240, 0.95));
+    border-radius: 12px; /* Mais arredondamento */
     box-shadow: var(--shadow-small);
 }
 
-.title-group h1 {
-    font-size: 3.8em; /* Título principal maior */
+.title h1 {
+    font-size: 3.5em; /* Título principal maior */
     color: var(--primary-green);
-    margin-bottom: 5px;
+    margin: 0;
     line-height: 1.1;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.title-group h2 {
-    font-size: 4.8em; /* Subtítulo grande e impactante */
+.title h2 {
+    font-size: 4.2em; /* Subtítulo grande */
     margin: 10px 0 25px;
     color: var(--secondary-green); /* Nova cor */
     text-transform: uppercase;
-    letter-spacing: 3px; /* Mais espaçamento */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 .subtitle {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.4em; /* Subtítulo descritivo */
+    font-size: 1.25em; /* Subtítulo descritivo */
     color: var(--light-text-color);
-    max-width: 700px;
+    max-width: 650px;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 0 20px;
 }
 
 /* -------------------- */
 /* SEÇÕES DE CONTEÚDO   */
 /* -------------------- */
 .content-section {
-    padding: 60px 0; /* Mais padding nas seções */
+    padding: 50px 0; /* Mais padding nas seções */
     text-align: center;
 }
 
-.section-heading {
-    font-size: 3em; /* Título das seções */
+.content-section h2 {
+    font-size: 2.8em; /* Título das seções */
     margin-bottom: 40px;
     color: var(--primary-green);
     position: relative; /* Para o pseudo-elemento */
     padding-bottom: 10px;
 }
 
-.section-heading::after {
+.content-section h2::after {
     content: '';
     display: block;
-    width: 80px;
+    width: 70px;
     height: 4px;
     background-color: var(--accent-green);
     margin: 10px auto 0;
     border-radius: 2px;
 }
 
-.content-flex-wrapper {
+.content-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 50px; /* Espaçamento generoso */
-    margin-top: 40px;
+    gap: 45px; /* Espaçamento generoso */
+    margin-top: 30px;
 }
 
-.text-card {
+.text-block {
     flex: 2;
-    min-width: 380px; /* Largura mínima para o texto */
-    max-width: 650px; /* Largura máxima para o texto */
+    min-width: 360px; /* Largura mínima para o texto */
+    max-width: 600px;
     text-align: left;
     background-color: var(--background-light); /* Fundo mais claro para blocos de texto */
     padding: 30px;
     border-radius: 12px;
     box-shadow: var(--shadow-small);
+    border: 1px solid var(--border-light); /* Borda sutil */
 }
 
-.text-card p {
-    font-size: 1.15em;
+.text-block p {
+    font-size: 1.1em;
     color: var(--light-text-color);
     margin-bottom: 15px;
 }
 
-.text-card p strong {
+.text-block p strong {
     color: var(--dark-text-color);
 }
 
-.image-display-box {
+.image-placeholder {
     flex: 1;
-    min-width: 300px; /* Largura mínima para a imagem */
-    height: 250px; /* Altura fixa */
-    background-color: var(--secondary-green); /* Fundo caso a imagem não carregue */
+    min-width: 280px; /* Largura mínima para a imagem */
+    height: 220px; /* Altura fixa */
+    background-color: var(--secondary-green);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow-small);
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid var(--accent-green); /* Borda mais destacada */
 }
 
-.image-display-box img {
+.image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cobre a área sem distorcer */
+    object-fit: cover;
     display: block;
-    transition: transform 0.4s ease-out; /* Transição para o hover */
+    transition: transform 0.4s ease-out; /* Transição no hover */
 }
 
-.image-display-box img:hover {
+.image-placeholder img:hover {
     transform: scale(1.05); /* Pequeno zoom no hover */
 }
-
 
 /* -------------------- */
 /* CARDS DE INFORMAÇÃO  */
 /* -------------------- */
-.cards-grid {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Min-width ajustado */
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); /* Min-width ajustado */
     gap: 35px; /* Mais espaçamento entre cards */
     justify-content: center;
     align-items: stretch;
     margin-top: 40px;
 }
 
-.info-card {
+.plant-card {
     background-color: var(--card-background);
     border-radius: 12px; /* Mais arredondamento */
     overflow: hidden;
     box-shadow: var(--shadow-small);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     text-align: center;
-    padding-bottom: 20px; /* Mais padding */
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     position: relative;
     border: 1px solid var(--border-light); /* Borda sutil */
 }
 
-.info-card:hover {
+.plant-card:hover {
     transform: translateY(-8px); /* Mais elevação no hover */
     box-shadow: var(--shadow-medium);
 }
 
-.card-image-container {
-    height: 180px; /* Altura das imagens dos cards */
-    background-color: var(--accent-green); /* Fundo se a imagem não carregar */
+.plant-box {
+    height: 170px; /* Altura das imagens dos cards */
+    background-color: var(--secondary-green);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,30 +274,36 @@ a {
     position: relative;
 }
 
-.card-image-container img {
+.plant-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.4s ease-out; /* Transição para o hover */
+    transition: transform 0.4s ease-out; /* Transição no hover */
 }
 
-.card-image-container img:hover {
+.plant-box img:hover {
     transform: scale(1.08); /* Mais zoom no hover */
 }
 
-.card-title {
-    font-size: 1.4em; /* Título dos cards */
+.plant-name-label {
+    font-family: 'Montserrat', sans-serif;
     color: var(--primary-green);
-    padding: 20px 15px 10px;
+    font-weight: 700;
+    font-size: 1.35em; /* Título dos cards */
+    padding: 18px 15px 10px;
     margin: 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.card-description {
-    font-size: 1em;
+.description {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 18px;
+    font-size: 0.98em;
     color: var(--light-text-color);
-    padding: 0 20px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     flex-grow: 1;
 }
 
@@ -311,17 +317,17 @@ a {
 .read-more-btn {
     display: inline-block;
     background-color: var(--secondary-green);
-    color: var(--white);
+    color: var(--card-background);
     padding: 10px 20px; /* Mais padding para o botão */
     border: none;
     border-radius: 25px; /* Botão bem arredondado */
     cursor: pointer;
     margin-top: auto;
-    font-size: 0.98em;
+    font-size: 0.95em;
     font-weight: 600;
     transition: background-color var(--transition-normal), transform var(--transition-fast), box-shadow var(--transition-normal);
     align-self: center;
-    min-width: 140px; /* Largura mínima do botão */
+    min-width: 130px;
     text-align: center;
     box-shadow: var(--shadow-small);
 }
@@ -347,23 +353,23 @@ a {
 .more-info-content {
     max-height: 0;
     overflow: hidden;
-    padding: 0 20px; /* Padding ajustado */
+    padding: 0 18px; /* Padding ajustado */
     transition: max-height var(--transition-slow), padding var(--transition-slow), opacity 0.5s ease-out;
     text-align: left;
     width: 100%;
     box-sizing: border-box;
     flex-shrink: 0;
-    background-color: var(--background-light); /* Fundo da área expandida */
+    background-color: var(--background-light);
     border-top: 1px solid var(--accent-green);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
-    margin-top: 15px; /* Mais espaço entre botão e conteúdo */
+    margin-top: 15px;
     opacity: 0;
     border-radius: 0 0 12px 12px; /* Arredondamento inferior */
 }
 
 .read-more-toggle:checked ~ .more-info-content {
-    max-height: 1200px; /* Aumentado para garantir espaço */
-    padding: 20px; /* Padding quando expandido */
+    max-height: 1000px; /* Valor alto para acomodar o texto */
+    padding: 18px; /* Adiciona padding quando expandido */
     opacity: 1;
 }
 
@@ -371,7 +377,7 @@ a {
     margin: 0;
     padding-bottom: 10px;
     color: var(--light-text-color);
-    font-size: 0.95em;
+    font-size: 0.9em;
 }
 
 .more-info-content p strong {
@@ -380,26 +386,64 @@ a {
 }
 
 /* -------------------- */
+/* CHAMADA PARA AÇÃO (CTA) */
+/* -------------------- */
+.call-to-action {
+    background-color: var(--secondary-green);
+    color: var(--card-background);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: var(--shadow-small);
+    text-align: center;
+}
+
+.call-to-action p {
+    font-size: 1.15em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--card-background); /* Garante que o texto seja branco */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: var(--card-background);
+    padding: 12px 25px;
+    border-radius: 30px; /* Botão bem arredondado */
+    font-size: 1.05em;
+    font-weight: 700;
+    transition: background-color var(--transition-normal), transform var(--transition-fast), box-shadow var(--transition-normal);
+    box-shadow: var(--shadow-medium);
+}
+
+.cta-button:hover {
+    background-color: var(--dark-text-color); /* Uma cor de destaque no hover */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-large);
+}
+
+/* -------------------- */
 /* FOOTER               */
 /* -------------------- */
 .footer {
     text-align: center;
-    color: var(--white);
-    font-size: 0.95em;
-    margin-top: 70px; /* Mais margem superior */
-    padding: 25px; /* Mais padding */
+    color: var(--card-background);
+    font-size: 0.9em;
+    margin-top: 60px;
+    padding: 25px;
     background-color: var(--primary-green);
-    border-radius: 12px 12px 0 0; /* Arredondamento superior */
+    border-radius: 12px 12px 0 0;
     box-shadow: var(--shadow-medium);
 }
 
 .footer .github-link {
-    margin-top: 15px; /* Mais espaço */
-    font-size: 2em; /* Ícone maior */
+    margin-top: 15px;
+    font-size: 1.8em;
 }
 
 .footer .github-link a {
-    color: var(--white);
+    color: var(--card-background);
     transition: color var(--transition-normal);
 }
 
@@ -416,50 +460,66 @@ a {
         margin: 40px auto;
     }
     .main-nav ul {
-        gap: 25px;
-    }
-    .header-title {
-        font-size: 2.2em;
-    }
-    .title-group h1 {
-        font-size: 3.2em;
-    }
-    .title-group h2 {
-        font-size: 4em;
-        letter-spacing: 2px;
-    }
-    .subtitle {
-        font-size: 1.2em;
-    }
-    .section-heading {
-        font-size: 2.5em;
-    }
-    .content-flex-wrapper {
-        gap: 40px;
-    }
-    .text-card {
-        min-width: 350px;
-        padding: 25px;
-    }
-    .image-display-box {
-        min-width: 250px;
-        height: 200px;
-    }
-    .cards-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 30px;
     }
-    .info-card {
-        padding-bottom: 15px;
+    .header-title {
+        font-size: 2.5em;
     }
-    .card-image-container {
-        height: 160px;
+    .title h1 {
+        font-size: 3em;
+    }
+    .title h2 {
+        font-size: 3.8em;
+    }
+    .subtitle {
+        font-size: 1.15em;
+    }
+    .content-section h2 {
+        font-size: 2.5em;
+    }
+    .content-wrapper {
+        gap: 35px;
+    }
+    .text-block {
+        min-width: 320px;
+        padding: 25px;
+    }
+    .image-placeholder {
+        min-width: 240px;
+        height: 190px;
+    }
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 30px;
+    }
+    .plant-card {
+        padding-bottom: 18px;
+    }
+    .plant-box {
+        height: 150px;
+    }
+    .plant-name-label {
+        font-size: 1.25em;
+    }
+    .description {
+        font-size: 0.95em;
+    }
+    .read-more-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+    .call-to-action p {
+        font-size: 1.05em;
+    }
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
     }
 }
 
 @media (max-width: 768px) {
     .header-title {
-        font-size: 1.8em;
+        font-size: 2em;
     }
     .main-nav ul {
         flex-direction: column;
@@ -467,18 +527,18 @@ a {
         margin-bottom: 10px;
     }
     .main-nav a {
-        padding: 10px 20px;
-        font-size: 0.95em;
+        padding: 10px 18px;
+        font-size: 1em;
     }
-    .title-group h1 {
-        font-size: 2.8em;
+    .title h1 {
+        font-size: 2.5em;
     }
-    .title-group h2 {
-        font-size: 3.5em;
+    .title h2 {
+        font-size: 3.2em;
         letter-spacing: 1px;
     }
     .subtitle {
-        font-size: 1.1em;
+        font-size: 1.05em;
     }
     .container {
         margin: 30px auto;
@@ -487,90 +547,106 @@ a {
     .content-section {
         padding: 40px 0;
     }
-    .section-heading {
+    .content-section h2 {
         font-size: 2.2em;
         margin-bottom: 30px;
     }
-    .content-flex-wrapper {
+    .content-wrapper {
         flex-direction: column;
-        gap: 30px;
+        gap: 25px;
     }
-    .text-card {
+    .text-block {
         min-width: unset;
         max-width: 100%;
         text-align: center;
         padding: 20px;
     }
-    .image-display-box {
+    .image-placeholder {
         width: 100%;
-        max-width: 300px; /* Limita a largura em telas muito pequenas */
+        max-width: 280px;
         height: 180px;
     }
-    .cards-grid {
-        grid-template-columns: 1fr; /* Um card por linha em telas menores */
+    .grid {
+        grid-template-columns: 1fr;
         gap: 25px;
     }
-    .info-card {
-        max-width: 350px; /* Limita a largura do card em telas menores */
-        margin: 0 auto; /* Centraliza o card individualmente */
+    .plant-card {
+        max-width: 330px;
+        margin: 0 auto;
     }
-    .card-image-container {
-        height: 140px;
+    .plant-box {
+        height: 130px;
     }
-    .card-title {
-        font-size: 1.3em;
+    .plant-name-label {
+        font-size: 1.2em;
     }
-    .card-description {
+    .description {
         font-size: 0.9em;
     }
     .read-more-btn {
-        font-size: 0.9em;
-        padding: 8px 15px;
+        font-size: 0.85em;
+        padding: 7px 14px;
     }
     .more-info-content {
         padding: 15px;
     }
+    .call-to-action {
+        padding: 20px;
+        margin-top: 25px;
+    }
+    .cta-button {
+        padding: 9px 18px;
+        font-size: 0.95em;
+    }
     .footer {
-        margin-top: 50px;
+        margin-top: 40px;
         padding: 20px;
     }
     .footer .github-link {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
 }
 
 @media (max-width: 480px) {
     .header-title {
-        font-size: 1.4em;
+        font-size: 1.7em;
     }
-    .title-group h1 {
+    .title h1 {
         font-size: 2.2em;
     }
-    .title-group h2 {
+    .title h2 {
         font-size: 2.8em;
     }
     .subtitle {
-        font-size: 0.95em;
+        font-size: 0.9em;
     }
     .container {
         padding: 15px;
     }
-    .content-section {
-        padding: 30px 0;
+    .content-section h2 {
+        font-size: 2em;
     }
-    .section-heading {
-        font-size: 1.8em;
-    }
-    .text-card p {
-        font-size: 1em;
-    }
-    .image-display-box {
+    .image-placeholder {
         height: 150px;
     }
-    .card-image-container {
-        height: 120px;
+    .plant-box {
+        height: 100px;
     }
-    .card-title {
-        font-size: 1.15em;
+    .plant-name-label {
+        font-size: 1.1em;
+        padding: 15px 10px 8px;
+    }
+    .description {
+        font-size: 0.85em;
+        padding: 0 15px;
+    }
+    .read-more-btn {
+        min-width: 100px;
+    }
+    .call-to-action p {
+        font-size: 0.95em;
+    }
+    .cta-button {
+        font-size: 0.9em;
     }
 }
